@@ -1,0 +1,225 @@
+2025-05-08 15:20:17,340 - INFO - API accessed by token: hod
+2025-05-08 15:20:17,391 - INFO - Sending email: from_role=vaibhav, to=['puc1001']
+2025-05-08 15:20:17,399 - INFO - Resolved USN 'puc1001' to astronft3@gmail.com.
+2025-05-08 15:20:17,399 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-08 15:20:17,399 - INFO - Dispatching email to: astronft3@gmail.com
+2025-05-08 15:20:22,214 - INFO - Email sent to astronft3@gmail.com from vaibhav.mca2023@bmsit.in
+2025-05-08 15:20:22,214 - INFO - Bulk email dispatch complete.
+2025-05-08 15:20:22,214 - INFO - Emails sent successfully to 1 targets
+2025-05-08 15:22:28,530 - INFO - API accessed by token: hod
+2025-05-08 15:22:28,530 - INFO - Sending email: from_role=vaibhav, to=['puc100']
+2025-05-08 15:22:28,542 - WARNING - USN 'puc100' not found.
+2025-05-08 15:22:28,542 - ERROR - No valid recipients resolved from input list.
+2025-05-08 15:22:28,542 - INFO - Emails sent successfully to 1 targets
+2025-05-08 15:44:47,869 - INFO - API accessed by token: hod
+2025-05-08 15:44:47,878 - INFO - Sending email: from_role=vaibhav, to=['sslc1002']
+2025-05-08 15:44:47,894 - INFO - Resolved USN 'sslc1002' to fakeemailone1vaib@gmail.com.
+2025-05-08 15:44:47,894 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-08 15:44:52,844 - INFO - Email sent to fakeemailone1vaib@gmail.com from vaibhav.mca2023@bmsit.in
+2025-05-08 15:44:52,844 - INFO - All emails sent successfully.
+2025-05-08 15:44:52,844 - INFO - Emails sent successfully.
+2025-05-08 15:45:40,603 - INFO - API accessed by token: hod
+2025-05-08 15:45:40,620 - INFO - Sending email: from_role=vaibhav, to=['sslc1003']
+2025-05-08 15:45:40,628 - INFO - Resolved USN 'sslc1003' to vaibhav@gmail.con.
+2025-05-08 15:45:40,628 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-08 15:45:40,628 - INFO - Dispatching email to: vaibhav@gmail.con
+2025-05-08 15:45:45,039 - INFO - Email sent to vaibhav@gmail.con from vaibhav.mca2023@bmsit.in
+2025-05-08 15:45:45,040 - INFO - All emails sent successfully.
+2025-05-08 15:45:45,040 - INFO - Emails sent successfully.
+2025-05-08 15:50:15,341 - INFO - API accessed by token: hod
+2025-05-08 15:50:15,361 - INFO - Sending email: from_role=vaibhav, to=['sslc1004']
+2025-05-08 15:50:15,369 - INFO - Resolved USN 'sslc1004' to vaibhav@gmal.connnn.
+2025-05-08 15:50:15,369 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-08 15:50:15,369 - INFO - Dispatching email to: vaibhav@gmal.connnn
+2025-05-08 15:50:20,107 - INFO - Email sent to vaibhav@gmal.connnn from vaibhav.mca2023@bmsit.in
+2025-05-08 15:50:20,107 - INFO - All emails sent successfully.
+2025-05-08 15:50:20,107 - INFO - Emails sent successfully.
+2025-05-08 15:55:20,889 - INFO - API accessed by token: hod
+2025-05-08 15:55:20,905 - INFO - Sending email: from_role=vaibhav, to=['sslc1004']
+2025-05-08 15:55:20,914 - INFO - Resolved USN 'sslc1004' to vaibhav@gmal.connnn.
+2025-05-08 15:55:20,922 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-08 15:55:20,922 - INFO - Dispatching email to: vaibhav@gmal.connnn
+2025-05-08 15:55:25,678 - INFO - Email sent to vaibhav@gmal.connnn from vaibhav.mca2023@bmsit.in
+2025-05-08 15:55:25,678 - INFO - All emails sent successfully.
+2025-05-08 15:55:25,678 - INFO - Emails sent successfully.
+2025-05-08 16:01:29,444 - INFO - API accessed by token: hod
+2025-05-08 16:01:29,460 - INFO - Sending email: from_role=vaibhav, to=['sslc1004']
+2025-05-08 16:01:29,469 - INFO - Resolved USN 'sslc1004' to vaibhav@gmal.connnn.
+2025-05-08 16:01:29,477 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-08 16:01:29,477 - INFO - Dispatching email to: vaibhav@gmal.connnn
+2025-05-08 16:01:34,309 - INFO - Email sent to vaibhav@gmal.connnn from vaibhav.mca2023@bmsit.in
+2025-05-08 16:01:34,311 - INFO - Emails sent successfully.
+2025-05-09 10:20:14,247 - INFO - API accessed by token: admin
+2025-05-09 10:21:00,675 - INFO - API accessed by token: admin
+2025-05-09 10:21:00,707 - INFO - Sending email: from_role=admin, to=['puc1001']
+2025-05-09 10:21:00,734 - INFO - Resolved USN 'puc1001' to astronft3@gmail.com.
+2025-05-09 10:21:00,734 - INFO - Sending email from vaibuk1234@gmail.com to 1 recipient(s).
+2025-05-09 10:21:00,734 - INFO - Dispatching email to: astronft3@gmail.com
+2025-05-09 10:21:05,826 - INFO - Email sent to astronft3@gmail.com from vaibuk1234@gmail.com
+2025-05-09 10:21:05,826 - INFO - Emails sent successfully.
+2025-05-09 10:21:28,755 - INFO - API accessed by token: admin
+2025-05-09 10:21:28,766 - INFO - Sending email: from_role=admin, to=['puc1001']
+2025-05-09 10:21:28,774 - INFO - Resolved USN 'puc1001' to astronft3@gmail.com.
+2025-05-09 10:21:28,774 - INFO - Sending email from vaibuk1234@gmail.com to 1 recipient(s).
+2025-05-09 10:21:28,774 - INFO - Dispatching email to: astronft3@gmail.com
+2025-05-09 10:21:33,204 - INFO - Email sent to astronft3@gmail.com from vaibuk1234@gmail.com
+2025-05-09 10:21:33,204 - INFO - Emails sent successfully.
+2025-05-09 14:30:49,538 - INFO - API accessed by token: None
+2025-05-09 14:30:49,538 - WARNING - Missing token in request
+2025-05-09 14:32:57,800 - INFO - API accessed by token: None
+2025-05-09 14:32:57,800 - WARNING - Missing token in request
+2025-05-09 14:33:05,088 - INFO - API accessed by token: None
+2025-05-09 14:33:05,088 - WARNING - Missing token in request
+2025-05-09 14:33:11,173 - INFO - API accessed by token: hod
+2025-05-09 14:33:11,189 - INFO - Sending email: from_role=vaibhav, to=['sslc1001']
+2025-05-09 14:33:11,197 - INFO - Resolved USN 'sslc1001' to hello@rosx.in.
+2025-05-09 14:33:11,197 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-09 14:33:11,197 - INFO - Dispatching email to: hello@rosx.in
+2025-05-09 14:33:15,671 - INFO - Email sent to hello@rosx.in from vaibhav.mca2023@bmsit.in
+2025-05-09 14:33:15,671 - INFO - Emails sent successfully.
+2025-05-09 14:37:03,931 - INFO - API accessed by token: hod
+2025-05-09 14:41:02,479 - INFO - API accessed by token: hod
+2025-05-09 14:42:29,786 - INFO - API accessed by token: hod
+2025-05-09 14:43:50,478 - INFO - API accessed by token: hod
+2025-05-09 14:43:50,495 - INFO - Sending email: from_role=vaibhav, to=["puc2001"]
+2025-05-09 14:43:50,495 - WARNING - USN '[' not found.
+2025-05-09 14:43:50,503 - WARNING - USN '"' not found.
+2025-05-09 14:43:50,503 - WARNING - USN 'p' not found.
+2025-05-09 14:43:50,503 - WARNING - USN 'u' not found.
+2025-05-09 14:43:50,503 - WARNING - USN 'c' not found.
+2025-05-09 14:43:50,511 - WARNING - USN '2' not found.
+2025-05-09 14:43:50,511 - WARNING - USN '0' not found.
+2025-05-09 14:43:50,511 - WARNING - USN '0' not found.
+2025-05-09 14:43:50,511 - WARNING - USN '1' not found.
+2025-05-09 14:43:50,511 - WARNING - USN '"' not found.
+2025-05-09 14:43:50,519 - WARNING - USN ']' not found.
+2025-05-09 14:43:50,519 - ERROR - No valid recipients resolved from input list.
+2025-05-09 14:43:50,519 - ERROR - Email sending crashed: cannot unpack non-iterable bool object
+2025-05-09 14:44:34,167 - INFO - API accessed by token: hod
+2025-05-09 14:44:34,175 - INFO - Sending email: from_role=vaibhav, to=puc2001
+2025-05-09 14:44:34,183 - WARNING - USN 'p' not found.
+2025-05-09 14:44:34,183 - WARNING - USN 'u' not found.
+2025-05-09 14:44:34,191 - WARNING - USN 'c' not found.
+2025-05-09 14:44:34,191 - WARNING - USN '2' not found.
+2025-05-09 14:44:34,191 - WARNING - USN '0' not found.
+2025-05-09 14:44:34,191 - WARNING - USN '0' not found.
+2025-05-09 14:44:34,200 - WARNING - USN '1' not found.
+2025-05-09 14:44:34,200 - ERROR - No valid recipients resolved from input list.
+2025-05-09 14:44:34,200 - ERROR - Email sending crashed: cannot unpack non-iterable bool object
+2025-05-09 14:44:59,706 - INFO - API accessed by token: hod
+2025-05-09 14:44:59,714 - INFO - Sending email: from_role=vaibhav, to="puc1001"
+2025-05-09 14:44:59,722 - WARNING - USN '"' not found.
+2025-05-09 14:44:59,722 - WARNING - USN 'p' not found.
+2025-05-09 14:44:59,722 - WARNING - USN 'u' not found.
+2025-05-09 14:44:59,730 - WARNING - USN 'c' not found.
+2025-05-09 14:44:59,730 - WARNING - USN '1' not found.
+2025-05-09 14:44:59,730 - WARNING - USN '0' not found.
+2025-05-09 14:44:59,730 - WARNING - USN '0' not found.
+2025-05-09 14:44:59,738 - WARNING - USN '1' not found.
+2025-05-09 14:44:59,738 - WARNING - USN '"' not found.
+2025-05-09 14:44:59,738 - ERROR - No valid recipients resolved from input list.
+2025-05-09 14:44:59,738 - ERROR - Email sending crashed: cannot unpack non-iterable bool object
+2025-05-09 14:48:11,087 - INFO - API accessed by token: hod
+2025-05-09 14:48:11,103 - INFO - Sending email: from_role=vaibhav, to=['puc1001']
+2025-05-09 14:48:11,111 - INFO - Resolved USN 'puc1001' to astronft3@gmail.com.
+2025-05-09 14:48:11,111 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-09 14:48:11,111 - INFO - Dispatching email to: astronft3@gmail.com
+2025-05-09 14:48:15,869 - INFO - Email sent to astronft3@gmail.com from vaibhav.mca2023@bmsit.in
+2025-05-09 14:48:15,869 - INFO - Emails sent successfully.
+2025-05-09 14:50:59,787 - INFO - API accessed by token: hod
+2025-05-09 14:50:59,787 - INFO - Sending email: from_role=vaibhav, to=['puc1001']
+2025-05-09 14:50:59,795 - INFO - Resolved USN 'puc1001' to astronft3@gmail.com.
+2025-05-09 14:50:59,795 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-09 14:50:59,795 - INFO - Dispatching email to: astronft3@gmail.com
+2025-05-09 14:51:21,909 - INFO - Email sent to astronft3@gmail.com from vaibhav.mca2023@bmsit.in
+2025-05-09 14:51:21,909 - INFO - Emails sent successfully.
+2025-05-11 01:55:02,791 - INFO - API accessed by token: hod
+2025-05-11 02:03:07,945 - INFO - API accessed by token: hod
+2025-05-11 02:03:08,054 - INFO - Sending email: from_role=vaibhav, to=['puc1001']
+2025-05-11 02:03:08,095 - INFO - Resolved USN 'puc1001' to astronft3@gmail.com.
+2025-05-11 02:03:08,095 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-11 02:03:08,095 - INFO - Dispatching email to: astronft3@gmail.com
+2025-05-11 02:03:28,598 - INFO - Email sent to astronft3@gmail.com from vaibhav.mca2023@bmsit.in
+2025-05-11 02:03:28,598 - INFO - Emails sent successfully.
+2025-05-11 02:28:14,653 - INFO - API accessed by token: hod
+2025-05-11 02:28:14,707 - INFO - Sending email: from_role=vaibhav, to=['puc1001']
+2025-05-11 02:28:14,732 - INFO - Resolved USN 'puc1001' to astronft3@gmail.com.
+2025-05-11 02:28:14,732 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-11 02:28:14,732 - INFO - Dispatching email to: astronft3@gmail.com
+2025-05-11 02:28:32,356 - INFO - Email sent to astronft3@gmail.com from vaibhav.mca2023@bmsit.in
+2025-05-11 02:28:32,356 - INFO - Emails sent successfully.
+2025-05-11 02:33:36,957 - INFO - API accessed by token: hod
+2025-05-11 02:33:36,960 - INFO - Sending email: from_role=vaibhav, to=['puc1001']
+2025-05-11 02:33:36,974 - INFO - Resolved USN 'puc1001' to astronft3@gmail.com.
+2025-05-11 02:33:36,974 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-11 02:33:36,974 - INFO - Dispatching email to: astronft3@gmail.com
+2025-05-11 02:33:54,178 - INFO - Email sent to astronft3@gmail.com from vaibhav.mca2023@bmsit.in
+2025-05-11 02:33:54,178 - INFO - Emails sent successfully.
+2025-05-11 02:45:04,957 - INFO - API accessed by token: hod
+2025-05-11 02:45:04,973 - INFO - Sending email: from_role=vaibhav, to=['puc1001']
+2025-05-11 02:45:04,973 - INFO - Resolved USN 'puc1001' to astronft3@gmail.com.
+2025-05-11 02:45:04,973 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-11 02:45:04,973 - INFO - Dispatching email to: astronft3@gmail.com
+2025-05-11 02:45:24,263 - INFO - Email sent to astronft3@gmail.com from vaibhav.mca2023@bmsit.in
+2025-05-11 02:45:24,263 - INFO - Emails sent successfully.
+2025-05-11 02:51:30,469 - INFO - API accessed by token: hod
+2025-05-11 02:51:30,484 - INFO - Sending email: from_role=vaibhav, to=['puc1001']
+2025-05-11 02:51:30,484 - INFO - Resolved USN 'puc1001' to astronft3@gmail.com.
+2025-05-11 02:51:30,484 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-11 02:51:30,484 - INFO - Dispatching email to: astronft3@gmail.com
+2025-05-11 02:51:49,126 - INFO - Email sent to astronft3@gmail.com from vaibhav.mca2023@bmsit.in
+2025-05-11 02:51:49,126 - INFO - Emails sent successfully.
+2025-05-11 10:02:44,116 - INFO - Email API endpoint accessed
+2025-05-11 10:02:49,061 - INFO - Attachment received: Flow_chart.pdf
+2025-05-11 10:02:49,076 - INFO - File saved at: attachments/Flow_chart.pdf
+2025-05-11 10:02:49,076 - INFO - API accessed with token: hod...
+2025-05-11 10:04:39,006 - INFO - Email API endpoint accessed
+2025-05-11 10:04:45,465 - INFO - Attachment received: Flow_chart.pdf
+2025-05-11 10:04:45,472 - INFO - File saved at: attachments/Flow_chart.pdf
+2025-05-11 10:04:45,472 - INFO - API accessed with token: hod...
+2025-05-11 10:05:05,008 - INFO - Email API endpoint accessed
+2025-05-11 10:05:11,362 - INFO - Attachment received: Flow_chart.pdf
+2025-05-11 10:05:11,375 - INFO - File saved at: attachments/Flow_chart.pdf
+2025-05-11 10:05:11,375 - INFO - API accessed with token: hod...
+2025-05-11 10:05:11,399 - INFO - Authenticated user: hod (ID: user2)
+2025-05-11 10:05:11,399 - INFO - Using template: welcome_email
+2025-05-11 10:05:11,482 - INFO - Including 1 attachment(s)
+2025-05-11 10:05:11,482 - INFO - Sending email: from_role=vaibhav, to=1 recipient(s), subject='test for puc1 as admin'
+2025-05-11 10:05:11,482 - INFO - Starting bulk email job: role=vaibhav, recipients=1
+2025-05-11 10:05:11,515 - INFO - Found credentials for vaibhav: vaibhav.mca2023@bmsit.in
+2025-05-11 10:05:11,515 - INFO - Resolving 1 recipient identifiers
+2025-05-11 10:05:11,540 - INFO - Resolved USN 'puc1001' to astronft3@gmail.com.
+2025-05-11 10:05:11,540 - INFO - Resolution complete: 0 groups, 1 individual users, 0 not found, 1 total unique email addresses
+2025-05-11 10:05:11,540 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-11 10:05:11,540 - INFO - Including  with 1 attachment(s): Flow_chart.pdf
+2025-05-11 10:05:11,540 - INFO - Dispatching email to: astronft3@gmail.com
+2025-05-11 10:05:11,540 - INFO - Dispatched 1 emails, waiting for completion...
+2025-05-11 10:05:31,720 - INFO - Email sent to astronft3@gmail.com from vaibhav.mca2023@bmsit.in in 20.17s
+2025-05-11 10:05:31,720 - INFO - Bulk email job completed successfully in 20.24s. All 1 emails sent.
+2025-05-11 10:05:31,720 - INFO - All 1 emails sent successfully
+2025-05-11 10:10:08,231 - INFO - Tracking pixel accessed for ID: b3a599507c164982832a737857f9ae54
+2025-05-11 10:10:08,231 - INFO - First open detected for email from vaibhav.mca2023@bmsit.in to astronft3@gmail.com
+2025-05-11 10:10:08,250 - INFO - Email tracking status updated successfully for ID: b3a599507c164982832a737857f9ae54
+2025-05-11 10:21:36,166 - INFO - Tracking pixel accessed for ID: aea97f4e5607476f905a6e37ed8e6f11
+2025-05-11 10:21:36,190 - INFO - First open detected for email from vaibhav.mca2023@bmsit.in to astronft3@gmail.com
+2025-05-11 10:21:36,208 - INFO - Email tracking status updated successfully for ID: aea97f4e5607476f905a6e37ed8e6f11
+2025-05-11 10:27:58,535 - INFO - Email API endpoint accessed
+2025-05-11 10:28:03,702 - INFO - Attachment received: Flow_chart.pdf
+2025-05-11 10:28:03,714 - INFO - File saved at: attachments/Flow_chart.pdf
+2025-05-11 10:28:03,714 - INFO - API accessed with token: hod...
+2025-05-11 10:28:03,744 - INFO - Authenticated user: hod (ID: user2)
+2025-05-11 10:28:03,744 - INFO - Using template: welcome_email
+2025-05-11 10:28:03,794 - INFO - Including 1 attachment(s)
+2025-05-11 10:28:03,794 - INFO - Sending email: from_role=vaibhav, to=1 recipient(s), subject='test for puc1 as admin'
+2025-05-11 10:28:03,794 - INFO - Starting bulk email job: role=vaibhav, recipients=1
+2025-05-11 10:28:03,802 - INFO - Found credentials for vaibhav: vaibhav.mca2023@bmsit.in
+2025-05-11 10:28:03,802 - INFO - Resolving 1 recipient identifiers
+2025-05-11 10:28:03,802 - INFO - Resolved USN 'puc1001' to astronft3@gmail.com.
+2025-05-11 10:28:03,802 - INFO - Resolution complete: 0 groups, 1 individual users, 0 not found, 1 total unique email addresses
+2025-05-11 10:28:03,802 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s).
+2025-05-11 10:28:03,802 - INFO - Including  with 1 attachment(s): Flow_chart.pdf
+2025-05-11 10:28:03,810 - INFO - Dispatching email to: astronft3@gmail.com
+2025-05-11 10:28:03,811 - INFO - Dispatched 1 emails, waiting for completion...
+2025-05-11 10:28:23,358 - INFO - Email sent to astronft3@gmail.com from vaibhav.mca2023@bmsit.in in 19.54s
+2025-05-11 10:28:23,358 - INFO - Bulk email job completed successfully in 19.56s. All 1 emails sent.
+2025-05-11 10:28:23,358 - INFO - All 1 emails sent successfully
