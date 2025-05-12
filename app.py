@@ -12,6 +12,10 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/')
+def home():
+    return "Welcome to the mailer system!"
+
 # Connect to MySQL
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
