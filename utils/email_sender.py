@@ -78,9 +78,9 @@ def send_email_smtp(from_email, from_token, to_email, subject, body, content_typ
     tracking_id = uuid.uuid4().hex
     logger.debug(f"Generated tracking ID {tracking_id} for email to {to_email}")
     
-    tracking_url = f"https://domain_name.com/track/{tracking_id}.png" #change the domain name
+    tracking_url = f"https://tem-mailer.onrender.com/track/{tracking_id}.png" #change the domain name
     
-    tracking_pixel = f'<img src="{tracking_url}" width="100" height="100"/>' #style="display:none;"
+    tracking_pixel = f'<img src="{tracking_url}" width="1" height="1" style="display:none;"/>' #style="display:none;"
     with app.app_context(): 
         try:
             logger.debug(f"Preparing email: from={from_email}, to={to_email}, subject='{subject}'")
