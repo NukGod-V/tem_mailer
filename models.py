@@ -75,3 +75,16 @@ class EmailStatus(db.Model):
     opened_at = db.Column(db.DateTime, nullable=True)
 
     email_log = db.relationship('EmailLog', backref=db.backref('statuses', lazy=True))
+
+class ScheduledEmail(db.Model):
+    __tablename__ = 'scheduled_emails'
+    id = db.Column(db.Integer, primary_key=True)
+    from_email = db.Column(db.String(255), nullable=False)
+    to_email = db.Column(db.String(255), nullable=False)
+    subject = db.Column(db.String(255), nullable=False)
+    body = db.Column(db.Text, nullable=False)
+    scheduled_at = db.Column(db.DateTime, nullable=False)
+    content_type = db.Column(db.String(50), default='text/html')
+    attachments = db.Column(db.Text)  # Comma-separated
+    is_sent = db.Column(db.Boolean, default=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)

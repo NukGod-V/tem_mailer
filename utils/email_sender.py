@@ -4,12 +4,11 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from threading import Thread
 from email.utils import make_msgid
-
+import time
 from models import GmailAccount, Group, GroupMember, EmailLog, EmailStatus
 from utils.logger import logger 
 import re
 import os
-import time
 import traceback
 
 def is_valid_email(email):

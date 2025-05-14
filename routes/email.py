@@ -4,8 +4,11 @@ from models import User
 from utils.email_sender import send_bulk_emails
 from utils.logger import logger
 from werkzeug.utils import secure_filename
+from datetime import datetime
+from models import ScheduledEmail
 import os
 import json
+import pytz
 
 ALLOWED_EXTENSIONS = {'pdf', 'jpg', 'jpeg', 'png', 'docx', 'xlsx', 'txt'}
 DISALLOWED_EXTENSIONS = {'exe', 'bat', 'sh'}
@@ -80,6 +83,19 @@ def send_email():
         
     body = data.get('body')
 
+    scheduled_at_raw = data.get('scheduled_at')
+    scheduled_at = None
+    ist = pytz.timezone('Asia/Kolkata')
+    
+    if scheduled_at_raw:
+        try:
+            scheduled_at = datetime.strptime(scheduled_at_raw, "%Y-%m-%d %H:%M:%S")
+            scheduled_at = ist.localize(scheduled_at)
+            logger.info(f"Email scheduled for: {scheduled_at}")
+        except ValueError:
+            logger.warning("Invalid datetime format for 'scheduled_at'")
+            return jsonify({"error": "Invalid 'scheduled_at' format. Use YYYY-MM-DD HH:MM:SS"}), 400
+
     # Validate required fields
     if not from_role or not to or not subject:
         missing = []
@@ -114,20 +130,40 @@ def send_email():
             logger.info(f"Including {len(attachments)} attachment(s)")
             
         recipient_count = len(to)
-        logger.info(f"Sending email: from_role={from_role}, to={recipient_count} recipient(s), subject='{subject}'")
-        
-        success, failed_list = send_bulk_emails(from_role, to, subject, body, content_type, attachments)
+        if not scheduled_at:
+            # Send immediately
+            logger.info(f"Sending email: from_role={from_role}, to={recipient_count} recipient(s), subject='{subject}'")
 
-        if success:
-            logger.info(f"All {recipient_count} emails sent successfully")
-            return jsonify({"message": "Emails sent successfully."}), 200
+            success, failed_list = send_bulk_emails(from_role, to, subject, body, content_type, attachments)
+
+            if success:
+                logger.info(f"All {recipient_count} emails sent successfully")
+                return jsonify({"message": "Emails sent successfully."}), 200
+            else:
+                failed_count = len(failed_list)
+                logger.warning(f"{failed_count} out of {recipient_count} emails failed to send")
+                return jsonify({
+                    "message": "Some emails failed to send.",
+                    "failed_recipients": failed_list
+                }), 400
         else:
-            failed_count = len(failed_list)
-            logger.warning(f"{failed_count} out of {recipient_count} emails failed to send")
-            return jsonify({
-                "message": "Some emails failed to send.",
-                "failed_recipients": failed_list
-            }), 400
+            # Schedule email for later
+            from models import db
+            logger.info(f"Storing {recipient_count} emails to be sent at {scheduled_at}")
+            for recipient in to:
+                scheduled = ScheduledEmail(
+                    from_email=from_role,  # resolve actual email in scheduler
+                    to_email=recipient,
+                    subject=subject,
+                    body=body,
+                    content_type=content_type,
+                    attachments=','.join(attachments) if attachments else None,
+                    scheduled_at=scheduled_at
+                )
+                db.session.add(scheduled)
+
+            db.session.commit()
+            return jsonify({"message": "Emails scheduled successfully."}), 200
 
     except Exception as e:
         logger.error(f"Email sending crashed with error: {str(e)}", exc_info=True)

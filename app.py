@@ -6,6 +6,7 @@ from routes.email import email_bp
 from dotenv import load_dotenv
 import os
 from routes.tracking import track_bp
+from scheduler import start_scheduler
 
 load_dotenv()
 
@@ -28,5 +29,6 @@ app.register_blueprint(track_bp)
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()  # Creates tables from models.py
+        start_scheduler(app)
     # app.run(debug=True)
     app.run(host='0.0.0.0', port=10000)

@@ -1,8 +1,9 @@
 # routes/tracking.py
 from flask import Blueprint, send_file, request
 from models import db, EmailStatus
-from datetime import datetime, timezone
+from datetime import datetime
 from utils.logger import logger
+import pytz
 
 track_bp = Blueprint('track', __name__)
 
@@ -31,9 +32,10 @@ def track_open(tracking_id):
             if is_proxy_user_agent(user_agent):
                 logger.info(f"Tracking pixel triggered by proxy (not marked as opened). UA: {user_agent}")
             else:
+                ist = pytz.timezone('Asia/Kolkata')
                 logger.info(f"First real open detected for email from {log.from_email} to {log.to_email}")
                 log.opened = True
-                log.opened_at = datetime.now(timezone.utc)
+                log.opened_at = datetime.now(ist)
                 try:
                     db.session.commit()
                     logger.info(f"Email tracking status updated successfully for ID: {tracking_id}")
