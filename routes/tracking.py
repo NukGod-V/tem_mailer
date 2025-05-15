@@ -1,4 +1,3 @@
-# routes/tracking.py
 from flask import Blueprint, send_file, request
 from models import db, EmailStatus
 from datetime import datetime
@@ -6,15 +5,6 @@ from utils.logger import logger
 import pytz
 
 track_bp = Blueprint('track', __name__)
-
-# List of known proxy indicators
-PROXY_USER_AGENTS = [
-    "GoogleImageProxy", "Google-Apps-Script", "Google", "Apple", "Outlook",
-    "Thunderbird", "iCloud", "Microsoft", "Yahoo", "Yandex", "bot"
-]
-
-def is_proxy_user_agent(user_agent):
-    return any(proxy.lower() in user_agent.lower() for proxy in PROXY_USER_AGENTS)
 
 @track_bp.route('/track/<tracking_id>.png')
 def track_open(tracking_id):
@@ -28,23 +18,20 @@ def track_open(tracking_id):
     log = EmailStatus.query.filter_by(tracking_id=tracking_id).first()
 
     if log:
-        if not log.opened:
-            if is_proxy_user_agent(user_agent):
-                logger.info(f"Tracking pixel triggered by proxy (not marked as opened). UA: {user_agent}")
-            else:
-                ist = pytz.timezone('Asia/Kolkata')
-                logger.info(f"First real open detected for email from {log.from_email} to {log.to_email}")
-                log.opened = True
-                log.opened_at = datetime.now(ist)
-                try:
-                    db.session.commit()
-                    logger.info(f"Email tracking status updated successfully for ID: {tracking_id}")
-                except Exception as e:
-                    db.session.rollback()
-                    logger.error(f"Failed to update email tracking status: {str(e)}", exc_info=True)
-        else:
-            logger.info(f"Repeat open detected for email with tracking ID: {tracking_id}")
-            logger.debug(f"Previous open at: {log.opened_at}")
+        log.view_count = (log.view_count or 0) + 1
+
+        if not log.opened and log.view_count >= 2:
+            ist = pytz.timezone('Asia/Kolkata')
+            log.opened = True
+            log.opened_at = datetime.now(ist)
+            logger.info(f"Confirmed real open (2nd+ view) for email from {log.from_email} to {log.to_email}")
+
+        try:
+            db.session.commit()
+            logger.debug(f"Email status updated for tracking ID: {tracking_id}")
+        except Exception as e:
+            db.session.rollback()
+            logger.error(f"Failed to update email tracking status: {str(e)}", exc_info=True)
     else:
         logger.warning(f"No email record found for tracking ID: {tracking_id}")
 

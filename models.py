@@ -73,6 +73,7 @@ class EmailStatus(db.Model):
     tracking_id = db.Column(db.String(100), unique=True, nullable=False)
     opened = db.Column(db.Boolean, default=False)
     opened_at = db.Column(db.DateTime, nullable=True)
+    view_count = db.Column(db.Integer, default=0)
 
     email_log = db.relationship('EmailLog', backref=db.backref('statuses', lazy=True))
 
