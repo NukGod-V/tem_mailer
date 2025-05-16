@@ -19,6 +19,7 @@ class GmailAccount(db.Model):
     role = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(255), nullable=False, unique=True)
     token = db.Column(db.String(255), nullable=False)
+    is_admin = db.Column(db.Boolean, default=False)
 
 
 class Group(db.Model):
@@ -45,9 +46,6 @@ class EmailLog(db.Model):
     sent_at = db.Column(db.DateTime, default=datetime.now(timezone.utc))
     status = db.Column(db.String(50), nullable=False)
     error_message = db.Column(db.Text, nullable=True)
-    # tracking_id = db.Column(db.String(100), unique=True)
-    # opened = db.Column(db.Boolean, default=False)
-    # opened_at = db.Column(db.DateTime, nullable=True)
 
 class EmailTemplate(db.Model):
     __tablename__ = 'email_templates'

@@ -2,6 +2,7 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from email.mime.application import MIMEApplication
 from threading import Thread, Lock
 from email.utils import make_msgid
 import time
@@ -76,108 +77,77 @@ def resolve_recipients(to_list):
 
 
 def send_email_smtp(from_email, from_token, to_email, subject, body, content_type="text/html", attachments=[]):
-    from app import db, app
-    
-    start_time = time.time()
+    from models import db
+    max_attempts = 3
+    attempt = 0
+    error_message = ""
     tracking_id = uuid.uuid4().hex
-    logger.debug(f"Generated tracking ID {tracking_id} for email to {to_email}")
-    
-    tracking_url = f"https://tem-mailer.onrender.com/track/{tracking_id}.png"
+    tracking_url = f"https://tem-mailer.onrender.com/track/{tracking_id}.png" # Change domain name
     tracking_pixel = f'<img src="{tracking_url}" width="1" height="1" style="display:none;"/>'
-    
-    with app.app_context(): 
+
+    if content_type.lower() == "text/html":
+        body += tracking_pixel
+
+    while attempt < max_attempts:
+        attempt += 1
         try:
-            logger.debug(f"Preparing email: from={from_email}, to={to_email}, subject='{subject}'")
-            
-            msg = MIMEMultipart('alternative')
-            msg['Subject'] = subject
-            msg['From'] = from_email
-            msg['To'] = to_email
-            msg['Message-ID'] = make_msgid(domain=from_email.split('@')[1])
-
-            if content_type.lower() == "text/html":
-                logger.debug("Adding tracking pixel to HTML email")
-                if body:
-                    body += tracking_pixel
-                else:
-                    body = tracking_pixel
-                msg.attach(MIMEText(body, 'html'))
-            else:
-                logger.debug("Plain text email - no tracking pixel")
-                msg.attach(MIMEText(body, 'plain'))
-                
-            # Process attachments
-            for path in attachments:
-                filename = os.path.basename(path)
-                logger.debug(f"Adding attachment: {filename}")
-                try:
-                    from email.mime.application import MIMEApplication
-                    with open(path, 'rb') as f:
-                        part = MIMEApplication(f.read())
-                        part.add_header('Content-Disposition', 'attachment', filename=filename)
-                        msg.attach(part)
-                    logger.debug(f"Attachment {filename} added successfully")
-                except Exception as e:
-                    logger.error(f"Failed to attach file {filename}: {str(e)}")
-
-            # Connect to SMTP server and send
-            logger.debug("Connecting to SMTP server")
             with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
                 smtp.starttls()
-                logger.debug(f"Logging in as {from_email}")
                 smtp.login(from_email, from_token)
-                
-                logger.debug("Sending email")
-                smtp.send_message(msg)
-                logger.debug("Email sent via SMTP")
 
-            # Log the sent email
-            logger.debug("Logging email to database")
-            log = EmailLog(from_email=from_email, to_email=to_email, subject=subject,
-                          body=body, status="sent")
+                msg = MIMEMultipart('alternative')
+                msg['Subject'] = subject
+                msg['From'] = from_email
+                msg['To'] = to_email
+                msg['Message-ID'] = make_msgid(domain=from_email.split('@')[1])
+
+                msg.attach(MIMEText(body, 'html' if content_type == "text/html" else 'plain'))
+
+                for path in attachments:
+                    try:
+                        filename = os.path.basename(path)
+                        with open(path, 'rb') as f:
+                            part = MIMEApplication(f.read())
+                            part.add_header('Content-Disposition', 'attachment', filename=filename)
+                            msg.attach(part)
+                    except Exception as e:
+                        logger.warning(f"Attachment failed: {e}")
+
+                smtp.send_message(msg)
+
+            # Log success
+            log = EmailLog(from_email=from_email, to_email=to_email, subject=subject, body=body, status="sent")
             db.session.add(log)
             db.session.commit()
-            logger.debug(f"Email logged with ID: {log.log_id}")
-            
-            # Create email status record with tracking info
-            status = EmailStatus(
+
+            db.session.add(EmailStatus(
                 email_log_id=log.log_id,
                 from_email=from_email,
                 to_email=to_email,
                 sent=True,
-                tracking_id=tracking_id,
-                opened=False,
-                opened_at=None
-            )
-            try:
-                db.session.add(status)
-                db.session.commit()
-                logger.debug(f"Email tracking status created for ID: {tracking_id}")
-            except Exception as e:
-                db.session.rollback()
-                logger.error(f"Failed to save EmailStatus: {str(e)}")
-                logger.debug(traceback.format_exc())
+                tracking_id=tracking_id
+            ))
+            db.session.commit()
 
-            elapsed_time = time.time() - start_time
-            logger.info(f"Email sent to {to_email} in {elapsed_time:.2f}s")
+            logger.info(f"Email sent to {to_email} on attempt {attempt}")
             return True, to_email
-            
-        except Exception as e:
-            elapsed_time = time.time() - start_time
-            logger.error(f"Failed to send to {to_email} after {elapsed_time:.2f}s: {str(e)}")
-            logger.debug(traceback.format_exc())
-            
-            try:
-                log = EmailLog(from_email=from_email, to_email=to_email, subject=subject,
-                               body=body, status="failed", error_message=str(e))
-                db.session.add(log)
-                db.session.commit()
-                logger.debug(f"Failure logged with ID: {log.log_id}")
-            except Exception as db_error:
-                logger.error(f"Failed to log email failure: {str(db_error)}")
-                
-            return False, to_email
 
+        except Exception as e:
+            error_message = str(e)
+            logger.warning(f"Attempt {attempt} failed to send email to {to_email}: {e}")
+
+    # All retries failed — log failure
+    try:
+        log = EmailLog(from_email=from_email, to_email=to_email, subject=subject,
+                       body=body, status="failed", error_message=error_message)
+        db.session.add(log)
+        db.session.commit()
+    except Exception as log_err:
+        logger.error(f"Error logging failure: {log_err}")
+
+    # Notify admin
+    notify_admin_of_failure(to_email, subject, error_message)
+    return False, to_email
 
 def send_bulk_emails(from_role, to_list, subject, body, content_type="text/html", attachments=[], template_name=None):
     from app import app
@@ -280,3 +250,34 @@ def send_bulk_emails(from_role, to_list, subject, body, content_type="text/html"
     else:
         logger.info(f"Bulk email job completed successfully in {elapsed_time:.2f}s. All {len(recipients)} emails sent")
         return True, []
+
+def notify_admin_of_failure(failed_email, original_subject, error_message):
+    from app import db
+    try:
+        admin_email = db.session.execute(
+            "SELECT email FROM gmail_accounts WHERE is_admin = true LIMIT 1"
+        ).scalar()
+    except Exception as db_err:
+        logger.error(f"Database error while fetching admin email: {db_err}")
+        return
+
+    if not admin_email:
+        logger.error("No admin email found in gmail_accounts")
+        return
+
+    subject = f"[Mailer Alert] Failed to Send Email to {failed_email}"
+    body = f"""The system failed to send an email after 3 attempts.
+
+    Recipient: {failed_email}
+    Original Subject: {original_subject}
+    Error: {error_message}
+
+    Please check the logs for more details.
+    """
+
+    try:
+        from_email, from_token = fetch_sender_credentials("admin")  # assumes a 'gmail_accounts' row with role='admin'
+        send_email_smtp(from_email, from_token, admin_email, subject, body, content_type="text/plain")
+        logger.info(f"Admin notified about failure to send email to {failed_email}")
+    except Exception as e:
+        logger.error(f"Failed to notify admin: {e}")
