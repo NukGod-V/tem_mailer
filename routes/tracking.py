@@ -20,7 +20,7 @@ def track_open(tracking_id):
     if log:
         log.view_count = (log.view_count or 0) + 1
 
-        if not log.opened and log.view_count >= 2:
+        if not log.opened and log.view_count >= 1:
             ist = pytz.timezone('Asia/Kolkata')
             log.opened = True
             log.opened_at = datetime.now(ist)

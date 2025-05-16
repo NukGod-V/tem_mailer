@@ -41,9 +41,10 @@ def send_email():
         logger.info(f"File saved at: {filepath}")
     else:
         logger.info("No attachment received with request")
-        
-    # data = request.get_json()
-    data = request.form.to_dict()
+    if request.is_json:    
+        data = request.get_json()
+    else:
+        data = request.form.to_dict()
     logger.debug(f"Request data: {data}")
     
     # Token validation
@@ -72,29 +73,31 @@ def send_email():
         
     subject = data.get('subject')
     template_name = data.get('template')
-    variables_raw = data.get('variables', {})
+    # variables_raw = data.get('variables', {})
     
-    try:
-        variables = json.loads(variables_raw) if isinstance(variables_raw, str) else variables_raw
-        logger.debug(f"Template variables parsed: {variables}")
-    except Exception as e:
-        logger.error(f"Failed to parse variables JSON: {str(e)}")
-        return jsonify({"error": "Invalid JSON in 'variables' field"}), 400
+    # try:
+    #     variables = json.loads(variables_raw) if isinstance(variables_raw, str) else variables_raw
+    #     logger.debug(f"Template variables parsed: {variables}")
+    # except Exception as e:
+    #     logger.error(f"Failed to parse variables JSON: {str(e)}")
+    #     return jsonify({"error": "Invalid JSON in 'variables' field"}), 400
         
     body = data.get('body')
 
     scheduled_at_raw = data.get('scheduled_at')
     scheduled_at = None
     ist = pytz.timezone('Asia/Kolkata')
-    
-    if scheduled_at_raw:
+    if scheduled_at_raw and scheduled_at_raw.strip():
         try:
-            scheduled_at = datetime.strptime(scheduled_at_raw, "%Y-%m-%d %H:%M:%S")
+            scheduled_at = datetime.strptime(scheduled_at_raw.strip(), "%Y-%m-%d %H:%M:%S")
             scheduled_at = ist.localize(scheduled_at)
+            print(scheduled_at)
             logger.info(f"Email scheduled for: {scheduled_at}")
         except ValueError:
             logger.warning("Invalid datetime format for 'scheduled_at'")
             return jsonify({"error": "Invalid 'scheduled_at' format. Use YYYY-MM-DD HH:MM:SS"}), 400
+    else:
+        logger.info("No scheduled_at provided; email will be sent immediately.")
 
     # Validate required fields
     if not from_role or not to or not subject:
@@ -106,22 +109,22 @@ def send_email():
         return jsonify({"error": f"Missing required fields: {', '.join(missing)}"}), 400
 
     # If template is used, render the body
-    if template_name:
-        try:
-            logger.info(f"Using template: {template_name}")
-            from utils.template_loader import load_and_render_template
-            body = load_and_render_template(template_name, variables)
-            content_type = "text/html"
-        except FileNotFoundError as e:
-            logger.error(f"Template not found: {template_name}, error: {str(e)}")
-            return jsonify({"error": str(e)}), 404
-    else:
-        if not body:
-            logger.warning("Missing body or template")
-            return jsonify({"error": "Missing body or template"}), 400
-        content_type = "text/html"  # Or switch to text/plain if needed
-        logger.info("Using directly provided email body")
-
+    # if template_name:
+    #     try:
+    #         logger.info(f"Using template: {template_name}")
+    #         from utils.template_loader import load_and_render_template
+    #         body = load_and_render_template(template_name, variables)
+    #         content_type = "text/html"
+    #     except FileNotFoundError as e:
+    #         logger.error(f"Template not found: {template_name}, error: {str(e)}")
+    #         return jsonify({"error": str(e)}), 404
+    # else:
+    #     if not body:
+    #         logger.warning("Missing body or template")
+    #         return jsonify({"error": "Missing body or template"}), 400
+    #     content_type = "text/html"  # Or switch to text/plain if needed
+    #     logger.info("Using directly provided email body")
+    content_type="text/html"
     # Send emails
     try:
         # Handle attachments
@@ -134,7 +137,7 @@ def send_email():
             # Send immediately
             logger.info(f"Sending email: from_role={from_role}, to={recipient_count} recipient(s), subject='{subject}'")
 
-            success, failed_list = send_bulk_emails(from_role, to, subject, body, content_type, attachments)
+            success, failed_list = send_bulk_emails(from_role, to, subject, body, content_type, attachments,template_name)
 
             if success:
                 logger.info(f"All {recipient_count} emails sent successfully")
