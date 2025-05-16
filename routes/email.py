@@ -1,11 +1,10 @@
 # routes/email.py
 from flask import Blueprint, request, jsonify
-from models import User
 from utils.email_sender import send_bulk_emails
 from utils.logger import logger
 from werkzeug.utils import secure_filename
 from datetime import datetime
-from models import ScheduledEmail
+from models import ScheduledEmail,GmailAccount,User
 import os
 import json
 import pytz
@@ -23,7 +22,10 @@ email_bp = Blueprint('email', __name__, url_prefix='/api')
 @email_bp.route('/send_email', methods=['POST'])
 def send_email():
     logger.info("Email API endpoint accessed")
-    
+    if request.is_json:    
+        data = request.get_json()
+    else:
+        data = request.form.to_dict()
     # Check for file
     file = request.files.get('attachment')
     filepath = None
@@ -41,28 +43,28 @@ def send_email():
         logger.info(f"File saved at: {filepath}")
     else:
         logger.info("No attachment received with request")
-    if request.is_json:    
-        data = request.get_json()
-    else:
-        data = request.form.to_dict()
-    logger.debug(f"Request data: {data}")
     
     # Token validation
+    from_role = data.get('from_role')
     token = data.get('token')
-    logger.info(f"API accessed with token: {token[:4]}...{token[-4:] if token and len(token) > 8 else ''}")
-    if not token:
-        logger.warning("Missing token in request")
-        return jsonify({"error": "Token missing"}), 400
 
-    user = User.query.filter_by(api_token=token, is_active=True).first()
+    logger.info(f"API accessed with token: {token[:4]}...{token[-4:] if token and len(token) > 8 else ''}")
+
+    # Step 1: Validate 'from_role' exists in gmail_accounts
+    gmail_account = GmailAccount.query.filter_by(role=from_role).first()
+    if not gmail_account:
+        logger.warning(f"Invalid from_role: {from_role}")
+        return jsonify({"error": f"Invalid sender role '{from_role}'"}), 400
+
+    # Step 2: Validate 'token' exists for a user matching 'from_role' and is active
+    user = User.query.filter_by(api_token=token, service_name=from_role, is_active=True).first()
     if not user:
-        logger.warning(f"Invalid token attempt: {token[:4]}...")
-        return jsonify({"error": "Invalid or inactive token"}), 401
-    
+        logger.warning(f"Unauthorized token attempt for role '{from_role}': {token[:4]}...")
+        return jsonify({"error": "Invalid or inactive token for the specified role"}), 401
+
     logger.info(f"Authenticated user: {user.service_name} (ID: {user.user_id})")
 
     # Extract email info
-    from_role = data.get('from_role')
     to_raw = data.get("to", [])
     try:
         to = json.loads(to_raw) if isinstance(to_raw, str) else to_raw
@@ -73,14 +75,6 @@ def send_email():
         
     subject = data.get('subject')
     template_name = data.get('template')
-    # variables_raw = data.get('variables', {})
-    
-    # try:
-    #     variables = json.loads(variables_raw) if isinstance(variables_raw, str) else variables_raw
-    #     logger.debug(f"Template variables parsed: {variables}")
-    # except Exception as e:
-    #     logger.error(f"Failed to parse variables JSON: {str(e)}")
-    #     return jsonify({"error": "Invalid JSON in 'variables' field"}), 400
         
     body = data.get('body')
 
@@ -102,28 +96,12 @@ def send_email():
     # Validate required fields
     if not from_role or not to or not subject:
         missing = []
-        if not from_role: missing.append("from_role")
+        # if not from_role: missing.append("from_role")
         if not to: missing.append("to")
         if not subject: missing.append("subject")
         logger.warning(f"Missing required fields: {', '.join(missing)}")
         return jsonify({"error": f"Missing required fields: {', '.join(missing)}"}), 400
 
-    # If template is used, render the body
-    # if template_name:
-    #     try:
-    #         logger.info(f"Using template: {template_name}")
-    #         from utils.template_loader import load_and_render_template
-    #         body = load_and_render_template(template_name, variables)
-    #         content_type = "text/html"
-    #     except FileNotFoundError as e:
-    #         logger.error(f"Template not found: {template_name}, error: {str(e)}")
-    #         return jsonify({"error": str(e)}), 404
-    # else:
-    #     if not body:
-    #         logger.warning("Missing body or template")
-    #         return jsonify({"error": "Missing body or template"}), 400
-    #     content_type = "text/html"  # Or switch to text/plain if needed
-    #     logger.info("Using directly provided email body")
     content_type="text/html"
     # Send emails
     try:
