@@ -89,3 +89,4 @@ class ScheduledEmail(db.Model):
     attachments = db.Column(db.Text)  # Comma-separated
     is_sent = db.Column(db.Boolean, default=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    template_name = db.Column(db.String(255), nullable=True)

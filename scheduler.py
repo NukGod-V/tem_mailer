@@ -21,7 +21,8 @@ def send_scheduled_emails(app):
                 subject=email.subject,
                 body=email.body,
                 content_type=email.content_type,
-                attachments=email.attachments.split(',') if email.attachments else []
+                attachments=email.attachments.split(',') if email.attachments else [],
+                template_name=email.template_name
             )
             if success:
                 email.is_sent = True

@@ -161,7 +161,8 @@ def send_email():
                     body=body or "[NO BODY]",
                     content_type=content_type,
                     attachments=','.join(attachments) if attachments else None,
-                    scheduled_at=scheduled_at
+                    scheduled_at=scheduled_at,
+                    template_name=template_name
                 )
                 db.session.add(scheduled)
 
