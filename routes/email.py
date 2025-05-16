@@ -158,7 +158,7 @@ def send_email():
                     from_email=from_role,  # resolve actual email in scheduler
                     to_email=recipient,
                     subject=subject,
-                    body=body,
+                    body=body or "[NO BODY]",
                     content_type=content_type,
                     attachments=','.join(attachments) if attachments else None,
                     scheduled_at=scheduled_at
