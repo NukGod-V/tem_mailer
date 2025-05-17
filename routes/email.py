@@ -50,13 +50,13 @@ def send_email():
 
     logger.info(f"API accessed with token: {token[:4]}...{token[-4:] if token and len(token) > 8 else ''}")
 
-    # Step 1: Validate 'from_role' exists in gmail_accounts
+    # Validate 'from_role' exists in gmail_accounts
     gmail_account = GmailAccount.query.filter_by(role=from_role).first()
     if not gmail_account:
         logger.warning(f"Invalid from_role: {from_role}")
         return jsonify({"error": f"Invalid sender role '{from_role}'"}), 400
 
-    # Step 2: Validate 'token' exists for a user matching 'from_role' and is active
+    # Validate 'token' exists for a user matching 'from_role' and is active
     user = User.query.filter_by(api_token=token, service_name=from_role, is_active=True).first()
     if not user:
         logger.warning(f"Unauthorized token attempt for role '{from_role}': {token[:4]}...")

@@ -86,7 +86,7 @@ def send_email_smtp(from_email, from_token, to_email, subject, body, content_typ
     tracking_pixel = f'<img src="{tracking_url}" width="1" height="1" style="display:none;"/>'
 
     if content_type.lower() == "text/html":
-        body += tracking_pixel
+        email_body += tracking_pixel
 
     while attempt < max_attempts:
         attempt += 1
@@ -101,7 +101,7 @@ def send_email_smtp(from_email, from_token, to_email, subject, body, content_typ
                 msg['To'] = to_email
                 msg['Message-ID'] = make_msgid(domain=from_email.split('@')[1])
 
-                msg.attach(MIMEText(body, 'html' if content_type == "text/html" else 'plain'))
+                msg.attach(MIMEText(email_body, 'html' if content_type == "text/html" else 'plain'))
 
                 for path in attachments:
                     try:
@@ -116,7 +116,7 @@ def send_email_smtp(from_email, from_token, to_email, subject, body, content_typ
                 smtp.send_message(msg)
 
             # Log success
-            log = EmailLog(from_email=from_email, to_email=to_email, subject=subject, body=body, status="sent")
+            log = EmailLog(from_email=from_email, to_email=to_email, subject=subject, body=email_body, status="sent")
             db.session.add(log)
             db.session.commit()
 
@@ -139,7 +139,7 @@ def send_email_smtp(from_email, from_token, to_email, subject, body, content_typ
     # All retries failed — log failure
     try:
         log = EmailLog(from_email=from_email, to_email=to_email, subject=subject,
-                       body=body, status="failed", error_message=error_message)
+                       body=email_body, status="failed", error_message=error_message)
         db.session.add(log)
         db.session.commit()
     except Exception as log_err:
