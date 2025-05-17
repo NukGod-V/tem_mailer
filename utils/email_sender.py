@@ -84,7 +84,7 @@ def send_email_smtp(from_email, from_token, to_email, subject, body, content_typ
     tracking_id = uuid.uuid4().hex
     tracking_url = f"https://tem-mailer.onrender.com/track/{tracking_id}.png" # Change domain name
     tracking_pixel = f'<img src="{tracking_url}" width="1" height="1" style="display:none;"/>'
-
+    email_body = body
     if content_type.lower() == "text/html":
         email_body += tracking_pixel
 
