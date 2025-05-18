@@ -36,58 +36,71 @@ def fetch_sender_credentials(role):
 
 def resolve_recipients(to_list):
     logger.info(f"Resolving {len(to_list)} recipient identifiers")
+    logger.debug(f"Raw to_list input: {to_list}")
+    
     result = set()
     groups_resolved = 0
     users_resolved = 0
     not_found = 0
-    
+
     for item in to_list:
+        item = item.strip()
+        logger.info(f"inside---------{item}")
+
         if item.endswith("*"):  # Group (multicast/broadcast)
             group_prefix = item[:-1]
             logger.debug(f"Looking up group: {group_prefix}")
             group = Group.query.filter(Group.name == group_prefix).first()
             if group:
                 members = GroupMember.query.filter_by(group_id=group.group_id).all()
-                member_emails = [m.email for m in members]
-                result.update(member_emails)
+                usns = [m.usn for m in members]
+                result.update(usns)
                 groups_resolved += 1
-                logger.info(f"Resolved group '{group_prefix}' to {len(members)} emails")
-                if len(member_emails) > 0:
-                    display_members = member_emails[:5]
-                    logger.debug(f"Group {group_prefix} members: {', '.join(display_members)}" + 
-                                (f"... and {len(member_emails)-5} more" if len(member_emails) > 5 else ""))
+                logger.info(f"Resolved group '{group_prefix}' to {len(members)} members")
+                if len(usns) > 0:
+                    display_usns = usns[:5]
+                    logger.debug(f"Group {group_prefix} USNs: {', '.join(display_usns)}" +
+                                (f"... and {len(usns)-5} more" if len(usns) > 5 else ""))
             else:
                 not_found += 1
                 logger.warning(f"Group '{group_prefix}' not found")
-        else:  # Single user (unicast)
-            logger.debug(f"Looking up user by USN: {item}")
+        
+        elif '@' in item:  # Direct email address
+            result.add(item)
+            logger.debug(f"Added direct email: {item}")
+        
+        else:  # Unicast USN
             member = GroupMember.query.filter_by(usn=item).first()
             if member:
-                result.add(member.email)
+                result.add(item)
                 users_resolved += 1
                 logger.info(f"Resolved USN '{item}' to {member.email}")
             else:
                 not_found += 1
                 logger.warning(f"USN '{item}' not found")
-    
-    resolved_emails = list(result)
+
+    resolved = list(result)
     logger.info(f"Resolution complete: {groups_resolved} groups, {users_resolved} users, " +
-                f"{not_found} not found, {len(resolved_emails)} total emails")
-    return resolved_emails
+                f"{not_found} not found, {len(resolved)} total identifiers")
+    return resolved
 
 
 def send_email_smtp(from_email, from_token, to_email, subject, body, content_type="text/html", attachments=[]):
     from models import db
+    if not body:
+        logger.error(f"Cannot send email to {to_email} — no body provided.")
+        return False, to_email
     max_attempts = 3
     attempt = 0
     error_message = ""
     tracking_id = uuid.uuid4().hex
     tracking_url = f"https://tem-mailer.onrender.com/track/{tracking_id}.png" # Change domain name
     tracking_pixel = f'<img src="{tracking_url}" width="1" height="1" style="display:none;"/>'
-    email_body = body
     if content_type.lower() == "text/html":
-        email_body += tracking_pixel
-
+        email_body = body + tracking_pixel
+    else:
+        email_body = body
+    
     while attempt < max_attempts:
         attempt += 1
         try:
@@ -166,7 +179,7 @@ def send_bulk_emails(from_role, to_list, subject, body, content_type="text/html"
 
     # Resolve recipients inside app context
     with app.app_context():
-        recipients = to_list if template_name else resolve_recipients(to_list)
+        recipients = resolve_recipients(to_list)
         if not recipients:
             logger.error("No valid recipients resolved from input list")
             return False, failed_emails
@@ -181,24 +194,22 @@ def send_bulk_emails(from_role, to_list, subject, body, content_type="text/html"
     
     def thread_wrapper(identifier):
         with app.app_context():
-            # Default values
             actual_email = identifier
-            final_body = body
+            final_body = body or ""
 
-            # Process USN with template if needed
-            if '@' not in identifier and template_name:
-                variables, err = fetch_template_variables(identifier)
-                if err:
-                    logger.warning(f"{err} — skipping: {identifier}")
-                    with failed_emails_lock:
-                        failed_emails.append(identifier)
-                    return
-
+            if template_name:
                 try:
+                    # Try fetching variables for this identifier
+                    variables, err = fetch_template_variables(identifier)
+                    if err:
+                        logger.warning(f"Template variable fetch error for {identifier}: {err}")
+                        # fallback to default email if not USN
+                        variables = {"email": identifier}
+
                     final_body = load_and_render_template(template_name, variables)
                     actual_email = variables.get("email", identifier)
                     if not actual_email or '@' not in actual_email:
-                        logger.warning(f"No valid email found for USN: {identifier}")
+                        logger.warning(f"No valid email found for: {identifier}")
                         with failed_emails_lock:
                             failed_emails.append(identifier)
                         return
@@ -207,17 +218,26 @@ def send_bulk_emails(from_role, to_list, subject, body, content_type="text/html"
                     with failed_emails_lock:
                         failed_emails.append(identifier)
                     return
-            
-            # Validate email format
+            else:
+                # No template and no body
+                if not final_body:
+                    logger.error(f"No body provided for {identifier} and no template applied.")
+                    with failed_emails_lock:
+                        failed_emails.append(identifier)
+                    return
+
+            # Final check for email format
             if not is_valid_email(actual_email):
                 logger.warning(f"Invalid email format skipped: {actual_email}")
                 with failed_emails_lock:
                     failed_emails.append(actual_email)
                 return
-                
+
             logger.info(f"Sending to: {actual_email}")
-            success, recipient = send_email_smtp(from_email, from_token, actual_email, subject, 
-                                                final_body, content_type, attachments)
+            success, recipient = send_email_smtp(
+                from_email, from_token, actual_email, subject,
+                final_body, content_type, attachments
+            )
 
             if not success:
                 with failed_emails_lock:
