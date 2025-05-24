@@ -1184,7 +1184,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:18:25,405 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:18:25,406 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:18:31,035 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:18:31,035 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:18:31,035 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:18:31,451 - WARNING - Bulk email job completed in 6.34s: 1 of 1 emails failed
 2025-05-17 19:18:31,451 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:18:31,453 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1193,7 +1193,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:18:31,809 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:18:31,811 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:18:32,675 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:18:32,675 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:18:32,675 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:18:33,085 - WARNING - Bulk email job completed in 1.63s: 1 of 1 emails failed
 2025-05-17 19:18:33,085 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:18:33,085 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1202,7 +1202,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:18:33,384 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:18:33,392 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:18:34,005 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:18:34,005 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:18:34,005 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:18:34,311 - INFO - Processing 3 scheduled emails
 2025-05-17 19:18:34,327 - INFO - Starting bulk email job: role=hod, recipients=1
 2025-05-17 19:18:34,618 - WARNING - Bulk email job completed in 1.53s: 1 of 1 emails failed
@@ -1212,7 +1212,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:18:34,624 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:18:34,625 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:18:39,943 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:18:39,943 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:18:39,943 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:18:40,250 - WARNING - Bulk email job completed in 5.92s: 1 of 1 emails failed
 2025-05-17 19:18:40,250 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:18:40,251 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1221,7 +1221,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:18:40,558 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:18:40,561 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:18:42,543 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:18:42,543 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:18:42,543 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:18:42,821 - WARNING - Bulk email job completed in 2.57s: 1 of 1 emails failed
 2025-05-17 19:18:42,822 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:18:42,822 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1230,7 +1230,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:18:43,102 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:18:43,104 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:18:43,732 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:18:43,732 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:18:43,732 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:18:44,088 - WARNING - Bulk email job completed in 1.27s: 1 of 1 emails failed
 2025-05-17 19:18:44,088 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:18:51,388 - INFO - Processing 3 scheduled emails
@@ -1240,7 +1240,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:18:51,721 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:18:51,722 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:18:52,334 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:18:52,334 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:18:52,334 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:18:52,634 - WARNING - Bulk email job completed in 1.25s: 1 of 1 emails failed
 2025-05-17 19:18:52,634 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:18:52,634 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1249,7 +1249,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:18:53,012 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:18:53,014 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:18:53,672 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:18:53,673 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:18:53,673 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:18:53,973 - WARNING - Bulk email job completed in 1.34s: 1 of 1 emails failed
 2025-05-17 19:18:53,973 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:18:53,974 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1258,7 +1258,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:18:54,266 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:18:54,267 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:18:55,030 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:18:55,030 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:18:55,030 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:18:55,303 - WARNING - Bulk email job completed in 1.33s: 1 of 1 emails failed
 2025-05-17 19:18:55,303 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:19:04,212 - INFO - Processing 3 scheduled emails
@@ -1268,7 +1268,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:19:04,621 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:19:04,623 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:19:05,236 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:19:05,236 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:19:05,236 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:19:05,547 - WARNING - Bulk email job completed in 1.34s: 1 of 1 emails failed
 2025-05-17 19:19:05,548 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:19:05,548 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1277,7 +1277,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:19:05,953 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:19:05,954 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:19:06,659 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:19:06,659 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:19:06,659 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:19:06,975 - WARNING - Bulk email job completed in 1.43s: 1 of 1 emails failed
 2025-05-17 19:19:06,975 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:19:06,975 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1286,7 +1286,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:19:07,321 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:19:07,323 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:19:07,973 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:19:07,973 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:19:07,973 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:19:08,310 - WARNING - Bulk email job completed in 1.34s: 1 of 1 emails failed
 2025-05-17 19:19:08,311 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:19:21,310 - INFO - Processing 3 scheduled emails
@@ -1296,7 +1296,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:19:21,629 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:19:21,631 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:19:22,338 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:19:22,338 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:19:22,338 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:19:22,642 - WARNING - Bulk email job completed in 1.33s: 1 of 1 emails failed
 2025-05-17 19:19:22,643 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:19:22,643 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1305,7 +1305,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:19:22,905 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:19:22,913 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:19:23,459 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:19:23,459 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:19:23,459 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:19:23,741 - WARNING - Bulk email job completed in 1.10s: 1 of 1 emails failed
 2025-05-17 19:19:23,742 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:19:23,742 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1314,7 +1314,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:19:24,044 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:19:24,045 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:19:24,695 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:19:24,696 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:19:24,696 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:19:24,997 - WARNING - Bulk email job completed in 1.25s: 1 of 1 emails failed
 2025-05-17 19:19:24,998 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:19:34,316 - INFO - Processing 3 scheduled emails
@@ -1324,7 +1324,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:19:34,727 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:19:34,727 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:19:35,418 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:19:35,418 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:19:35,418 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:19:35,768 - WARNING - Bulk email job completed in 1.45s: 1 of 1 emails failed
 2025-05-17 19:19:35,769 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:19:35,770 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1333,7 +1333,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:19:36,166 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:19:36,168 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:19:36,944 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:19:36,944 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:19:36,944 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:19:37,239 - WARNING - Bulk email job completed in 1.47s: 1 of 1 emails failed
 2025-05-17 19:19:37,239 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:19:37,240 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1342,7 +1342,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:19:37,696 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:19:37,698 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:19:38,493 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:19:38,493 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:19:38,493 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:19:38,928 - WARNING - Bulk email job completed in 1.69s: 1 of 1 emails failed
 2025-05-17 19:19:38,929 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:19:51,486 - INFO - Processing 3 scheduled emails
@@ -1352,7 +1352,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:19:51,828 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:19:51,830 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:19:52,645 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:19:52,645 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:19:52,645 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:19:53,062 - WARNING - Bulk email job completed in 1.57s: 1 of 1 emails failed
 2025-05-17 19:19:53,063 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:19:53,063 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1361,7 +1361,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:19:53,465 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:19:53,467 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:19:54,395 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:19:54,396 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:19:54,396 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:19:54,899 - WARNING - Bulk email job completed in 1.84s: 1 of 1 emails failed
 2025-05-17 19:19:54,899 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:19:54,900 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1370,7 +1370,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:19:55,294 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:19:55,297 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:19:56,133 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:19:56,133 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:19:56,133 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:19:56,535 - WARNING - Bulk email job completed in 1.63s: 1 of 1 emails failed
 2025-05-17 19:19:56,536 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:20:04,321 - INFO - Processing 3 scheduled emails
@@ -1380,7 +1380,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:20:04,732 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:20:04,741 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:20:05,416 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:20:05,416 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:20:05,416 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:20:05,754 - WARNING - Bulk email job completed in 1.43s: 1 of 1 emails failed
 2025-05-17 19:20:05,755 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:20:05,755 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1389,7 +1389,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:20:06,168 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:20:06,172 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:20:06,883 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:20:06,883 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:20:06,883 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:20:07,261 - WARNING - Bulk email job completed in 1.51s: 1 of 1 emails failed
 2025-05-17 19:20:07,261 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:20:07,262 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1398,7 +1398,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:20:07,699 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:20:07,701 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:20:08,463 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:20:08,463 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:20:08,463 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:20:08,823 - WARNING - Bulk email job completed in 1.56s: 1 of 1 emails failed
 2025-05-17 19:20:08,824 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:20:21,435 - INFO - Processing 3 scheduled emails
@@ -1408,7 +1408,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:20:21,830 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:20:21,831 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:20:22,649 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:20:22,649 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:20:22,649 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:20:23,057 - WARNING - Bulk email job completed in 1.62s: 1 of 1 emails failed
 2025-05-17 19:20:23,057 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:20:23,058 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1417,7 +1417,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:20:23,364 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:20:23,365 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:20:24,132 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:20:24,132 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:20:24,132 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:20:24,553 - WARNING - Bulk email job completed in 1.49s: 1 of 1 emails failed
 2025-05-17 19:20:24,553 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:20:24,554 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1426,7 +1426,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:20:24,863 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:20:24,865 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:20:26,129 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:20:26,129 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:20:26,129 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:20:26,538 - WARNING - Bulk email job completed in 1.98s: 1 of 1 emails failed
 2025-05-17 19:20:26,538 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:20:34,109 - INFO - Processing 3 scheduled emails
@@ -1436,7 +1436,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:20:34,626 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:20:34,626 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:20:35,348 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:20:35,348 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:20:35,348 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:20:35,753 - WARNING - Bulk email job completed in 1.64s: 1 of 1 emails failed
 2025-05-17 19:20:35,753 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:20:35,754 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1445,7 +1445,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:20:36,163 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:20:36,164 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:20:36,781 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:20:36,781 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:20:36,781 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:20:37,080 - WARNING - Bulk email job completed in 1.33s: 1 of 1 emails failed
 2025-05-17 19:20:37,080 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:20:37,080 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1454,7 +1454,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:20:37,392 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:20:37,393 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:20:38,074 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:20:38,074 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:20:38,074 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:20:38,410 - WARNING - Bulk email job completed in 1.33s: 1 of 1 emails failed
 2025-05-17 19:20:38,410 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:20:51,524 - INFO - Processing 3 scheduled emails
@@ -1464,7 +1464,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:20:51,839 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:20:51,841 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:20:52,651 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:20:52,652 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:20:52,652 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:20:52,959 - WARNING - Bulk email job completed in 1.43s: 1 of 1 emails failed
 2025-05-17 19:20:52,959 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:20:52,960 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1473,7 +1473,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:20:53,264 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:20:53,266 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:20:53,980 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:20:53,981 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:20:53,981 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:20:54,282 - WARNING - Bulk email job completed in 1.32s: 1 of 1 emails failed
 2025-05-17 19:20:54,282 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:20:54,282 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1482,7 +1482,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:20:54,697 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:20:54,699 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:20:55,531 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:20:55,531 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:20:55,531 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:20:55,822 - WARNING - Bulk email job completed in 1.54s: 1 of 1 emails failed
 2025-05-17 19:20:55,823 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:21:04,534 - INFO - Processing 3 scheduled emails
@@ -1492,7 +1492,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:21:05,142 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:21:05,144 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:21:05,860 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:21:05,860 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:21:05,860 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:21:06,255 - WARNING - Bulk email job completed in 1.72s: 1 of 1 emails failed
 2025-05-17 19:21:06,256 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:21:06,256 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1501,7 +1501,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:21:06,575 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:21:06,577 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:21:07,499 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:21:07,500 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:21:07,500 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:21:07,916 - WARNING - Bulk email job completed in 1.66s: 1 of 1 emails failed
 2025-05-17 19:21:07,916 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:21:07,917 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1510,7 +1510,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:21:08,275 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:21:08,277 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:21:08,934 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:21:08,935 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:21:08,935 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:21:09,220 - WARNING - Bulk email job completed in 1.30s: 1 of 1 emails failed
 2025-05-17 19:21:09,220 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:21:21,688 - INFO - Processing 3 scheduled emails
@@ -1520,7 +1520,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:21:22,036 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:21:22,038 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:21:22,655 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:21:22,655 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:21:22,655 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:21:22,957 - WARNING - Bulk email job completed in 1.27s: 1 of 1 emails failed
 2025-05-17 19:21:22,958 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:21:22,958 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1529,7 +1529,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:21:23,261 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:21:23,261 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:21:23,981 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:21:23,981 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:21:23,981 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:21:24,391 - WARNING - Bulk email job completed in 1.43s: 1 of 1 emails failed
 2025-05-17 19:21:24,392 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:21:24,392 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1538,7 +1538,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:21:24,741 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:21:24,743 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:21:25,723 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:21:25,724 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:21:25,724 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:21:26,115 - WARNING - Bulk email job completed in 1.72s: 1 of 1 emails failed
 2025-05-17 19:21:26,116 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:21:34,131 - INFO - Processing 3 scheduled emails
@@ -1548,7 +1548,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:21:34,437 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:21:34,439 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:21:35,150 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:21:35,152 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:21:35,152 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:21:35,540 - WARNING - Bulk email job completed in 1.41s: 1 of 1 emails failed
 2025-05-17 19:21:35,540 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:21:35,541 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1557,7 +1557,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:21:35,870 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:21:35,872 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:21:36,470 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:21:36,470 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:21:36,470 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:21:36,781 - WARNING - Bulk email job completed in 1.24s: 1 of 1 emails failed
 2025-05-17 19:21:36,781 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:21:36,782 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1566,7 +1566,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:21:37,090 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:21:37,090 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:21:37,918 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:21:37,918 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:21:37,918 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:21:38,634 - WARNING - Bulk email job completed in 1.85s: 1 of 1 emails failed
 2025-05-17 19:21:38,634 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:21:51,629 - INFO - Processing 3 scheduled emails
@@ -1576,7 +1576,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:21:52,144 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:21:52,144 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:21:53,063 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:21:53,063 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:21:53,063 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:21:53,575 - WARNING - Bulk email job completed in 1.94s: 1 of 1 emails failed
 2025-05-17 19:21:53,575 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:21:53,575 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1585,7 +1585,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:21:54,187 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:21:54,187 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:21:55,211 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:21:55,211 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:21:55,211 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:21:55,519 - WARNING - Bulk email job completed in 1.94s: 1 of 1 emails failed
 2025-05-17 19:21:55,519 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:21:55,519 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1594,7 +1594,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:21:55,828 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:21:55,830 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:21:56,438 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:21:56,438 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:21:56,438 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:21:56,757 - WARNING - Bulk email job completed in 1.24s: 1 of 1 emails failed
 2025-05-17 19:21:56,757 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:22:04,327 - INFO - Processing 3 scheduled emails
@@ -1604,7 +1604,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:22:04,732 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:22:04,732 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:22:05,731 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:22:05,732 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:22:05,732 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:22:06,159 - WARNING - Bulk email job completed in 1.83s: 1 of 1 emails failed
 2025-05-17 19:22:06,159 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:22:06,160 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1613,7 +1613,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:22:06,477 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:22:06,479 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:22:07,101 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:22:07,101 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:22:07,101 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:22:07,503 - WARNING - Bulk email job completed in 1.34s: 1 of 1 emails failed
 2025-05-17 19:22:07,503 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:22:07,504 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1622,7 +1622,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:22:07,802 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:22:07,804 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:22:08,377 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:22:08,377 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:22:08,377 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:22:08,729 - WARNING - Bulk email job completed in 1.22s: 1 of 1 emails failed
 2025-05-17 19:22:08,729 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:22:21,847 - INFO - Processing 3 scheduled emails
@@ -1632,7 +1632,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:22:22,246 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:22:22,246 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:22:23,065 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:22:23,065 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:22:23,065 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:22:23,473 - WARNING - Bulk email job completed in 1.62s: 1 of 1 emails failed
 2025-05-17 19:22:23,473 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:22:23,473 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1641,7 +1641,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:22:23,782 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:22:23,783 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:22:24,501 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:22:24,501 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:22:24,501 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:22:24,804 - WARNING - Bulk email job completed in 1.33s: 1 of 1 emails failed
 2025-05-17 19:22:24,804 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:22:24,805 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1650,7 +1650,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:22:25,112 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:22:25,114 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:22:25,833 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:22:25,833 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:22:25,833 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:22:26,240 - WARNING - Bulk email job completed in 1.43s: 1 of 1 emails failed
 2025-05-17 19:22:26,241 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:22:34,500 - INFO - Processing 3 scheduled emails
@@ -1660,7 +1660,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:22:34,842 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:22:34,844 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:22:35,658 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:22:35,659 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:22:35,659 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:22:35,966 - WARNING - Bulk email job completed in 1.46s: 1 of 1 emails failed
 2025-05-17 19:22:35,967 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:22:35,967 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1669,7 +1669,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:22:36,274 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:22:36,276 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:22:36,887 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:22:36,888 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:22:36,888 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:22:37,195 - WARNING - Bulk email job completed in 1.23s: 1 of 1 emails failed
 2025-05-17 19:22:37,195 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:22:37,195 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1678,7 +1678,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:22:37,595 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:22:37,597 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:22:38,217 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:22:38,217 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:22:38,217 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:22:38,527 - WARNING - Bulk email job completed in 1.33s: 1 of 1 emails failed
 2025-05-17 19:22:38,527 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:22:51,740 - INFO - Processing 3 scheduled emails
@@ -1688,7 +1688,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:22:52,086 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:22:52,088 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:22:52,761 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:22:52,761 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:22:52,761 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:22:53,068 - WARNING - Bulk email job completed in 1.33s: 1 of 1 emails failed
 2025-05-17 19:22:53,069 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:22:53,069 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1697,7 +1697,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:22:53,375 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:22:53,377 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:22:53,988 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:22:53,989 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:22:53,989 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:22:54,501 - WARNING - Bulk email job completed in 1.43s: 1 of 1 emails failed
 2025-05-17 19:22:54,501 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:22:54,502 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1706,7 +1706,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:22:55,014 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:22:55,016 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:22:55,729 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:22:55,729 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:22:55,729 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:22:56,290 - WARNING - Bulk email job completed in 1.79s: 1 of 1 emails failed
 2025-05-17 19:22:56,291 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:23:04,328 - INFO - Processing 3 scheduled emails
@@ -1716,7 +1716,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:23:04,740 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:23:04,741 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:23:05,354 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:23:05,355 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:23:05,355 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:23:05,771 - WARNING - Bulk email job completed in 1.44s: 1 of 1 emails failed
 2025-05-17 19:23:05,771 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:23:05,772 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1725,7 +1725,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:23:06,090 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:23:06,092 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:23:06,688 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:23:06,688 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:23:06,688 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:23:06,992 - WARNING - Bulk email job completed in 1.22s: 1 of 1 emails failed
 2025-05-17 19:23:06,992 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:23:06,993 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1734,7 +1734,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:23:07,402 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:23:07,404 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:23:08,029 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:23:08,029 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:23:08,029 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:23:08,317 - WARNING - Bulk email job completed in 1.32s: 1 of 1 emails failed
 2025-05-17 19:23:08,317 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:23:21,433 - INFO - Processing 3 scheduled emails
@@ -1744,7 +1744,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:23:21,737 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:23:21,737 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:23:22,762 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:23:22,762 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:23:22,762 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:23:23,068 - WARNING - Bulk email job completed in 1.63s: 1 of 1 emails failed
 2025-05-17 19:23:23,069 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:23:23,069 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1753,7 +1753,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:23:23,585 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:23:23,587 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:23:24,194 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:23:24,194 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:23:24,194 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:23:24,503 - WARNING - Bulk email job completed in 1.43s: 1 of 1 emails failed
 2025-05-17 19:23:24,503 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:23:24,504 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1762,7 +1762,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:23:24,814 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:23:24,815 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:23:25,623 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:23:25,623 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:23:25,623 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:23:25,938 - WARNING - Bulk email job completed in 1.43s: 1 of 1 emails failed
 2025-05-17 19:23:25,938 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:23:34,399 - INFO - Processing 3 scheduled emails
@@ -1772,7 +1772,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:23:34,742 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:23:34,742 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:23:35,559 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:23:35,559 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:23:35,559 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:23:36,073 - WARNING - Bulk email job completed in 1.67s: 1 of 1 emails failed
 2025-05-17 19:23:36,073 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:23:36,073 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1781,7 +1781,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:23:36,484 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:23:36,486 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:23:37,320 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:23:37,321 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:23:37,321 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:23:37,608 - WARNING - Bulk email job completed in 1.53s: 1 of 1 emails failed
 2025-05-17 19:23:37,609 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:23:37,609 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1790,7 +1790,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:23:38,032 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:23:38,034 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:23:38,633 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:23:38,634 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:23:38,634 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:23:38,983 - WARNING - Bulk email job completed in 1.37s: 1 of 1 emails failed
 2025-05-17 19:23:38,983 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:23:51,539 - INFO - Processing 3 scheduled emails
@@ -1800,7 +1800,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:23:52,151 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:23:52,153 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:23:52,763 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:23:52,763 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:23:52,763 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:23:53,073 - WARNING - Bulk email job completed in 1.53s: 1 of 1 emails failed
 2025-05-17 19:23:53,074 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:23:53,074 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1809,7 +1809,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:23:53,678 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:23:53,681 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:23:54,608 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:23:54,609 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:23:54,609 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:23:54,913 - WARNING - Bulk email job completed in 1.84s: 1 of 1 emails failed
 2025-05-17 19:23:54,914 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:23:54,914 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1818,7 +1818,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:23:55,225 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:23:55,226 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:23:56,144 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:23:56,144 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:23:56,144 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:23:56,757 - WARNING - Bulk email job completed in 1.84s: 1 of 1 emails failed
 2025-05-17 19:23:56,758 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:24:04,334 - INFO - Processing 3 scheduled emails
@@ -1828,7 +1828,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:24:04,634 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:24:04,642 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:24:05,562 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:24:05,562 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:24:05,562 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:24:06,071 - WARNING - Bulk email job completed in 1.74s: 1 of 1 emails failed
 2025-05-17 19:24:06,071 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:24:06,071 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1837,7 +1837,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:24:06,484 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:24:06,486 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:24:07,111 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:24:07,112 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:24:07,112 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:24:07,605 - WARNING - Bulk email job completed in 1.53s: 1 of 1 emails failed
 2025-05-17 19:24:07,605 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:24:07,605 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1846,7 +1846,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:24:07,920 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:24:07,922 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:24:08,531 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:24:08,531 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:24:08,531 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:24:08,838 - WARNING - Bulk email job completed in 1.23s: 1 of 1 emails failed
 2025-05-17 19:24:08,839 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:24:21,434 - INFO - Processing 3 scheduled emails
@@ -1856,7 +1856,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:24:21,741 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:24:21,743 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:24:22,355 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:24:22,355 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:24:22,355 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:24:22,667 - WARNING - Bulk email job completed in 1.23s: 1 of 1 emails failed
 2025-05-17 19:24:22,668 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:24:22,671 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1865,7 +1865,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:24:22,970 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:24:22,972 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:24:23,584 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:24:23,584 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:24:23,584 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:24:24,089 - WARNING - Bulk email job completed in 1.42s: 1 of 1 emails failed
 2025-05-17 19:24:24,097 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:24:24,097 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1874,7 +1874,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:24:24,413 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:24:24,415 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:24:25,125 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:24:25,125 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:24:25,125 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:24:25,529 - WARNING - Bulk email job completed in 1.43s: 1 of 1 emails failed
 2025-05-17 19:24:25,530 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:24:34,233 - INFO - Processing 3 scheduled emails
@@ -1884,7 +1884,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:24:34,544 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:24:34,546 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:24:35,228 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:24:35,228 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:24:35,228 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:24:35,873 - WARNING - Bulk email job completed in 1.64s: 1 of 1 emails failed
 2025-05-17 19:24:35,873 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:24:35,874 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1893,7 +1893,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:24:36,287 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:24:36,289 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:24:37,203 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:24:37,204 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:24:37,204 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:24:37,509 - WARNING - Bulk email job completed in 1.63s: 1 of 1 emails failed
 2025-05-17 19:24:37,510 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:24:37,510 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1902,7 +1902,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:24:37,921 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:24:37,923 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:24:38,582 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:24:38,583 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:24:38,583 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:24:38,944 - WARNING - Bulk email job completed in 1.43s: 1 of 1 emails failed
 2025-05-17 19:24:38,944 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:24:51,949 - INFO - Processing 3 scheduled emails
@@ -1912,7 +1912,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:24:52,361 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:24:52,363 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:24:53,074 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:24:53,074 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:24:53,074 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:24:53,376 - WARNING - Bulk email job completed in 1.43s: 1 of 1 emails failed
 2025-05-17 19:24:53,384 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:24:53,384 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1921,7 +1921,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:24:53,792 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:24:53,794 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:24:54,408 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:24:54,408 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:24:54,408 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:24:54,812 - WARNING - Bulk email job completed in 1.43s: 1 of 1 emails failed
 2025-05-17 19:24:54,812 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:24:54,812 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1930,7 +1930,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:24:55,122 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:24:55,125 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:24:55,737 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:24:55,737 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:24:55,737 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:24:56,050 - WARNING - Bulk email job completed in 1.24s: 1 of 1 emails failed
 2025-05-17 19:24:56,050 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:25:04,243 - INFO - Processing 3 scheduled emails
@@ -1940,7 +1940,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:25:04,649 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:25:04,650 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:25:05,259 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:25:05,259 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:25:05,259 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:25:05,567 - WARNING - Bulk email job completed in 1.32s: 1 of 1 emails failed
 2025-05-17 19:25:05,567 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:25:05,567 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1949,7 +1949,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:25:05,874 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:25:05,876 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:25:06,600 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:25:06,600 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:25:06,600 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:25:06,899 - WARNING - Bulk email job completed in 1.33s: 1 of 1 emails failed
 2025-05-17 19:25:06,900 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:25:06,900 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1958,7 +1958,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:25:07,308 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:25:07,308 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:25:07,924 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:25:07,924 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:25:07,924 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:25:08,220 - WARNING - Bulk email job completed in 1.32s: 1 of 1 emails failed
 2025-05-17 19:25:08,220 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:25:21,338 - INFO - Processing 3 scheduled emails
@@ -1968,7 +1968,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:25:21,644 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:25:21,646 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:25:22,463 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:25:22,463 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:25:22,463 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:25:22,829 - WARNING - Bulk email job completed in 1.49s: 1 of 1 emails failed
 2025-05-17 19:25:22,829 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:25:22,830 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1977,7 +1977,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:25:23,180 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:25:23,182 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:25:23,794 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:25:23,794 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:25:23,794 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:25:24,102 - WARNING - Bulk email job completed in 1.27s: 1 of 1 emails failed
 2025-05-17 19:25:24,103 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:25:24,104 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -1986,7 +1986,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:25:24,521 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:25:24,523 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:25:25,993 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:25:25,994 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:25:25,994 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:25:26,353 - WARNING - Bulk email job completed in 2.25s: 1 of 1 emails failed
 2025-05-17 19:25:26,354 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:25:34,237 - INFO - Processing 3 scheduled emails
@@ -1996,7 +1996,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:25:34,649 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:25:34,650 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:25:35,215 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:25:35,215 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:25:35,215 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:25:35,623 - WARNING - Bulk email job completed in 1.38s: 1 of 1 emails failed
 2025-05-17 19:25:35,623 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:25:35,624 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2005,7 +2005,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:25:35,978 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:25:35,980 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:25:36,797 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:25:36,797 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:25:36,797 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:25:37,107 - WARNING - Bulk email job completed in 1.48s: 1 of 1 emails failed
 2025-05-17 19:25:37,108 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:25:37,111 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2014,7 +2014,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:25:37,411 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:25:37,411 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:25:38,027 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:25:38,028 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:25:38,028 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:25:38,392 - WARNING - Bulk email job completed in 1.28s: 1 of 1 emails failed
 2025-05-17 19:25:38,393 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:25:51,340 - INFO - Processing 3 scheduled emails
@@ -2024,7 +2024,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:25:51,647 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:25:51,649 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:25:52,362 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:25:52,362 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:25:52,362 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:25:52,627 - WARNING - Bulk email job completed in 1.29s: 1 of 1 emails failed
 2025-05-17 19:25:52,628 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:25:52,628 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2033,7 +2033,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:25:52,981 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:25:52,982 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:25:53,689 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:25:53,689 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:25:53,689 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:25:54,105 - WARNING - Bulk email job completed in 1.48s: 1 of 1 emails failed
 2025-05-17 19:25:54,105 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:25:54,106 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2042,7 +2042,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:25:54,411 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:25:54,413 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:25:55,231 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:25:55,231 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:25:55,231 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:25:55,642 - WARNING - Bulk email job completed in 1.54s: 1 of 1 emails failed
 2025-05-17 19:25:55,642 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:26:04,243 - INFO - Processing 3 scheduled emails
@@ -2052,7 +2052,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:26:04,552 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:26:04,554 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:26:05,162 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:26:05,162 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:26:05,162 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:26:05,468 - WARNING - Bulk email job completed in 1.22s: 1 of 1 emails failed
 2025-05-17 19:26:05,468 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:26:05,469 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2061,7 +2061,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:26:05,778 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:26:05,780 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:26:06,391 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:26:06,392 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:26:06,392 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:26:06,701 - WARNING - Bulk email job completed in 1.23s: 1 of 1 emails failed
 2025-05-17 19:26:06,701 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:26:06,702 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2070,7 +2070,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:26:07,008 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:26:07,010 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:26:07,623 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:26:07,623 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:26:07,623 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:26:07,927 - WARNING - Bulk email job completed in 1.22s: 1 of 1 emails failed
 2025-05-17 19:26:07,927 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:26:21,446 - INFO - Processing 3 scheduled emails
@@ -2080,7 +2080,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:26:21,750 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:26:21,752 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:26:22,464 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:26:22,464 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:26:22,464 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:26:22,779 - WARNING - Bulk email job completed in 1.33s: 1 of 1 emails failed
 2025-05-17 19:26:22,779 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:26:22,779 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2089,7 +2089,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:26:23,081 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:26:23,083 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:26:23,802 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:26:23,802 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:26:23,802 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:26:24,111 - WARNING - Bulk email job completed in 1.33s: 1 of 1 emails failed
 2025-05-17 19:26:24,111 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:26:24,112 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2098,7 +2098,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:26:24,514 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:26:24,514 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:26:25,230 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:26:25,231 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:26:25,231 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:26:25,542 - WARNING - Bulk email job completed in 1.43s: 1 of 1 emails failed
 2025-05-17 19:26:25,542 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:26:34,234 - INFO - Processing 3 scheduled emails
@@ -2108,7 +2108,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:26:34,556 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:26:34,558 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:26:35,164 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:26:35,164 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:26:35,164 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:26:35,499 - WARNING - Bulk email job completed in 1.26s: 1 of 1 emails failed
 2025-05-17 19:26:35,500 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:26:35,500 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2117,7 +2117,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:26:35,880 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:26:35,880 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:26:36,495 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:26:36,495 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:26:36,495 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:26:36,802 - WARNING - Bulk email job completed in 1.30s: 1 of 1 emails failed
 2025-05-17 19:26:36,802 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:26:36,803 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2126,7 +2126,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:26:37,110 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:26:37,112 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:26:37,847 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:26:37,847 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:26:37,847 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:26:38,343 - WARNING - Bulk email job completed in 1.54s: 1 of 1 emails failed
 2025-05-17 19:26:38,343 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:26:51,452 - INFO - Processing 3 scheduled emails
@@ -2136,7 +2136,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:26:51,752 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:26:51,755 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:26:52,468 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:26:52,468 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:26:52,468 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:26:52,770 - WARNING - Bulk email job completed in 1.32s: 1 of 1 emails failed
 2025-05-17 19:26:52,770 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:26:52,778 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2145,7 +2145,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:26:53,084 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:26:53,086 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:26:53,703 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:26:53,703 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:26:53,703 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:26:53,984 - WARNING - Bulk email job completed in 1.21s: 1 of 1 emails failed
 2025-05-17 19:26:53,984 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:26:53,984 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2154,7 +2154,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:26:54,319 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:26:54,321 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:26:54,926 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:26:54,926 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:26:54,926 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:26:55,234 - WARNING - Bulk email job completed in 1.25s: 1 of 1 emails failed
 2025-05-17 19:26:55,234 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:27:04,882 - INFO - Processing 3 scheduled emails
@@ -2164,7 +2164,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:27:05,170 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:27:05,170 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:27:05,704 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:27:05,704 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:27:05,704 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:27:05,999 - WARNING - Bulk email job completed in 1.12s: 1 of 1 emails failed
 2025-05-17 19:27:05,999 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:27:06,000 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2173,7 +2173,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:27:06,387 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:27:06,390 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:27:07,574 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:27:07,574 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:27:07,574 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:27:07,855 - WARNING - Bulk email job completed in 1.86s: 1 of 1 emails failed
 2025-05-17 19:27:07,856 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:27:07,857 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2182,7 +2182,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:27:08,153 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:27:08,153 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:27:08,931 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:27:08,931 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:27:08,931 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:27:09,306 - WARNING - Bulk email job completed in 1.45s: 1 of 1 emails failed
 2025-05-17 19:27:09,306 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:27:21,379 - INFO - Processing 3 scheduled emails
@@ -2192,7 +2192,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:27:21,659 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:27:21,661 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:27:22,386 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:27:22,386 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:27:22,386 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:27:22,699 - WARNING - Bulk email job completed in 1.32s: 1 of 1 emails failed
 2025-05-17 19:27:22,699 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:27:22,700 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2201,7 +2201,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:27:22,982 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:27:22,984 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:27:23,553 - WARNING - USN 'puc*' not found in database
-2025-05-17 19:27:23,553 - WARNING - USN 'puc*' not found — skipping: puc*
+2025-05-17 19:27:23,553 - WARNING - USN 'puc*' not found ï¿½ skipping: puc*
 2025-05-17 19:27:23,815 - WARNING - Bulk email job completed in 1.12s: 1 of 1 emails failed
 2025-05-17 19:27:23,815 - WARNING - Failed to send scheduled email to: puc*
 2025-05-17 19:27:23,815 - INFO - Starting bulk email job: role=hod, recipients=1
@@ -2210,7 +2210,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:27:24,100 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:27:24,103 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:27:24,657 - WARNING - USN 'puc1*' not found in database
-2025-05-17 19:27:24,658 - WARNING - USN 'puc1*' not found — skipping: puc1*
+2025-05-17 19:27:24,658 - WARNING - USN 'puc1*' not found ï¿½ skipping: puc1*
 2025-05-17 19:27:25,035 - WARNING - Bulk email job completed in 1.22s: 1 of 1 emails failed
 2025-05-17 19:27:25,035 - WARNING - Failed to send scheduled email to: puc1*
 2025-05-17 19:36:45,520 - INFO - Starting mailer application
@@ -2237,7 +2237,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:37:12,889 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:37:12,891 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:37:19,026 - WARNING - USN 'sslc*' not found in database
-2025-05-17 19:37:19,026 - WARNING - USN 'sslc*' not found — skipping: sslc*
+2025-05-17 19:37:19,026 - WARNING - USN 'sslc*' not found ï¿½ skipping: sslc*
 2025-05-17 19:37:19,341 - WARNING - Bulk email job completed in 6.82s: 1 of 1 emails failed
 2025-05-17 19:37:19,341 - WARNING - 1 out of 1 emails failed to send
 2025-05-17 19:37:46,817 - INFO - Email API endpoint accessed
@@ -2254,7 +2254,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:37:48,368 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:37:48,368 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:37:49,040 - WARNING - USN 'sslc*' not found in database
-2025-05-17 19:37:49,041 - WARNING - USN 'sslc*' not found — skipping: sslc*
+2025-05-17 19:37:49,041 - WARNING - USN 'sslc*' not found ï¿½ skipping: sslc*
 2025-05-17 19:37:49,443 - WARNING - Bulk email job completed in 1.42s: 1 of 1 emails failed
 2025-05-17 19:37:49,443 - WARNING - 1 out of 1 emails failed to send
 2025-05-17 19:49:11,186 - INFO - Starting mailer application
@@ -2281,7 +2281,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 19:59:31,817 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 19:59:31,819 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 19:59:38,576 - WARNING - USN 'sslc*' not found in database
-2025-05-17 19:59:38,576 - WARNING - USN 'sslc*' not found — skipping: sslc*
+2025-05-17 19:59:38,576 - WARNING - USN 'sslc*' not found ï¿½ skipping: sslc*
 2025-05-17 19:59:38,985 - WARNING - Bulk email job completed in 7.61s: 1 of 1 emails failed
 2025-05-17 19:59:38,985 - WARNING - 1 out of 1 emails failed to send
 2025-05-17 20:28:14,003 - INFO - Starting mailer application
@@ -2303,7 +2303,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 20:28:25,186 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 20:28:25,187 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 20:28:30,810 - WARNING - USN 'sslc*' not found in database
-2025-05-17 20:28:30,811 - WARNING - USN 'sslc*' not found — skipping: sslc*
+2025-05-17 20:28:30,811 - WARNING - USN 'sslc*' not found ï¿½ skipping: sslc*
 2025-05-17 20:28:31,216 - WARNING - Bulk email job completed in 6.33s: 1 of 1 emails failed
 2025-05-17 20:28:31,217 - WARNING - 1 out of 1 emails failed to send
 2025-05-17 20:28:45,688 - INFO - Email API endpoint accessed
@@ -2320,7 +2320,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 20:28:47,366 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 20:28:47,369 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 20:28:49,933 - WARNING - USN 'sslc*' not found in database
-2025-05-17 20:28:49,933 - WARNING - USN 'sslc*' not found — skipping: sslc*
+2025-05-17 20:28:49,933 - WARNING - USN 'sslc*' not found ï¿½ skipping: sslc*
 2025-05-17 20:28:50,307 - WARNING - Bulk email job completed in 3.52s: 1 of 1 emails failed
 2025-05-17 20:28:50,308 - WARNING - 1 out of 1 emails failed to send
 2025-05-17 20:30:59,714 - INFO - Starting mailer application
@@ -2342,7 +2342,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 20:31:13,515 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 20:31:13,516 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 20:31:19,456 - WARNING - USN 'sslc*' not found in database
-2025-05-17 20:31:19,456 - WARNING - USN 'sslc*' not found — skipping: sslc*
+2025-05-17 20:31:19,456 - WARNING - USN 'sslc*' not found ï¿½ skipping: sslc*
 2025-05-17 20:31:19,862 - WARNING - Bulk email job completed in 6.66s: 1 of 1 emails failed
 2025-05-17 20:31:19,862 - WARNING - 1 out of 1 emails failed to send
 2025-05-17 21:02:34,738 - INFO - Starting mailer application
@@ -2369,7 +2369,7 @@ WHERE gmail_accounts.role = %(role_1)s
 2025-05-17 21:17:37,337 - INFO - Including 1 attachment(s): Mailer_docs.docx
 2025-05-17 21:17:37,339 - INFO - Dispatched 1 emails, waiting for completion
 2025-05-17 21:17:43,340 - WARNING - USN 'sslc*' not found in database
-2025-05-17 21:17:43,340 - WARNING - USN 'sslc*' not found — skipping: sslc*
+2025-05-17 21:17:43,340 - WARNING - USN 'sslc*' not found ï¿½ skipping: sslc*
 2025-05-17 21:17:43,691 - WARNING - Bulk email job completed in 6.76s: 1 of 1 emails failed
 2025-05-17 21:17:43,691 - WARNING - 1 out of 1 emails failed to send
 2025-05-17 21:22:31,394 - INFO - Starting mailer application
