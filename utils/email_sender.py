@@ -95,7 +95,7 @@ def generate_tracking_pixel(tracking_id, base_url=None):
     """Generate tracking pixel HTML with configurable base URL"""
     if base_url is None:
         # You can set this via environment variable or config
-        base_url = os.getenv('TRACKING_BASE_URL', 'https://tem-mailer.onrender.com')
+        base_url = os.getenv('TRACKING_BASE_URL')
     
     tracking_url = f"{base_url}/track/{tracking_id}.png"
     return f'<img src="{tracking_url}" width="1" height="1" style="display:none;" alt=""/>'

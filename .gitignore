@@ -2,3 +2,4 @@ app.db
 utils\__pycache__
 routes\__pycache__
 __pycache__
+.env
