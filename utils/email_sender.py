@@ -91,18 +91,32 @@ def resolve_recipients(to_list):
     return resolved
 
 
+def generate_tracking_pixel(tracking_id, base_url=None):
+    """Generate tracking pixel HTML with configurable base URL"""
+    if base_url is None:
+        # You can set this via environment variable or config
+        base_url = os.getenv('TRACKING_BASE_URL', 'https://tem-mailer.onrender.com')
+    
+    tracking_url = f"{base_url}/track/{tracking_id}.png"
+    return f'<img src="{tracking_url}" width="1" height="1" style="display:none;" alt=""/>'
+
+
 def send_email_smtp(from_email, from_token, to_email, subject, body, content_type="text/html", attachments=[]):
     from models import db
+    from app import app
+    
     if not body:
         logger.error(f"Cannot send email to {to_email} — no body provided.")
         return False, to_email
+        
     max_attempts = 3
     attempt = 0
     error_message = ""
     tracking_id = uuid.uuid4().hex
-    tracking_url = f"https://tem-mailer.onrender.com/track/{tracking_id}.png" # Change domain name
-    tracking_pixel = f'<img src="{tracking_url}" width="1" height="1" style="display:none;"/>'
+    
+    # Only add tracking pixel for HTML emails
     if content_type.lower() == "text/html":
+        tracking_pixel = generate_tracking_pixel(tracking_id)
         email_body = (body or "") + tracking_pixel
     else:
         email_body = body
@@ -120,53 +134,112 @@ def send_email_smtp(from_email, from_token, to_email, subject, body, content_typ
                 msg['To'] = to_email
                 msg['Message-ID'] = make_msgid(domain=from_email.split('@')[1])
 
-                msg.attach(MIMEText(email_body, 'html' if content_type == "text/html" else 'plain'))
+                # Create the email body part
+                if content_type.lower() == "text/html":
+                    msg.attach(MIMEText(email_body, 'html'))
+                else:
+                    msg.attach(MIMEText(email_body, 'plain'))
 
+                # Handle attachments with better error handling
                 for path in attachments:
                     try:
+                        if not os.path.exists(path):
+                            logger.warning(f"Attachment file not found: {path}")
+                            continue
+                            
                         filename = os.path.basename(path)
                         with open(path, 'rb') as f:
-                            part = MIMEApplication(f.read())
+                            file_data = f.read()
+                            if len(file_data) == 0:
+                                logger.warning(f"Attachment file is empty: {path}")
+                                continue
+                                
+                            part = MIMEApplication(file_data)
                             part.add_header('Content-Disposition', 'attachment', filename=filename)
                             msg.attach(part)
+                            logger.debug(f"Attached file: {filename} ({len(file_data)} bytes)")
                     except Exception as e:
-                        logger.warning(f"Attachment failed: {e}")
+                        logger.warning(f"Failed to attach file {path}: {e}")
 
+                # Send the email
                 smtp.send_message(msg)
 
-            # Log success
-            log = EmailLog(from_email=from_email, to_email=to_email, subject=subject, body=email_body, status="sent")
-            db.session.add(log)
-            db.session.commit()
+            # Log success in app context
+            with app.app_context():
+                try:
+                    log = EmailLog(
+                        from_email=from_email, 
+                        to_email=to_email, 
+                        subject=subject, 
+                        body=email_body, 
+                        status="sent"
+                    )
+                    db.session.add(log)
+                    db.session.flush()  # Get the log_id
+                    
+                    email_status = EmailStatus(
+                        email_log_id=log.log_id,
+                        from_email=from_email,
+                        to_email=to_email,
+                        sent=True,
+                        tracking_id=tracking_id
+                    )
+                    db.session.add(email_status)
+                    db.session.commit()
+                    
+                    logger.info(f"Email sent to {to_email} on attempt {attempt} (tracking: {tracking_id})")
+                except Exception as db_err:
+                    logger.error(f"Database logging error: {db_err}")
+                    db.session.rollback()
 
-            db.session.add(EmailStatus(
-                email_log_id=log.log_id,
-                from_email=from_email,
-                to_email=to_email,
-                sent=True,
-                tracking_id=tracking_id
-            ))
-            db.session.commit()
-
-            logger.info(f"Email sent to {to_email} on attempt {attempt}")
             return True, to_email
 
+        except smtplib.SMTPAuthenticationError as e:
+            error_message = f"SMTP Authentication failed: {str(e)}"
+            logger.error(f"SMTP Auth error for {to_email}: {error_message}")
+            break  # Don't retry auth errors
+            
+        except smtplib.SMTPRecipientsRefused as e:
+            error_message = f"Recipient refused: {str(e)}"
+            logger.error(f"Recipient refused {to_email}: {error_message}")
+            break  # Don't retry recipient errors
+            
+        except smtplib.SMTPServerDisconnected as e:
+            error_message = f"SMTP server disconnected: {str(e)}"
+            logger.warning(f"SMTP disconnected for {to_email} on attempt {attempt}: {error_message}")
+            time.sleep(1)  # Brief pause before retry
+            
         except Exception as e:
-            error_message = str(e)
-            logger.warning(f"Attempt {attempt} failed to send email to {to_email}: {e}")
+            error_message = f"Unexpected error: {str(e)}"
+            logger.warning(f"Attempt {attempt} failed to send email to {to_email}: {error_message}")
+            if attempt < max_attempts:
+                time.sleep(1)  # Brief pause before retry
 
     # All retries failed — log failure
-    try:
-        log = EmailLog(from_email=from_email, to_email=to_email, subject=subject,
-                       body=email_body, status="failed", error_message=error_message)
-        db.session.add(log)
-        db.session.commit()
-    except Exception as log_err:
-        logger.error(f"Error logging failure: {log_err}")
+    with app.app_context():
+        try:
+            log = EmailLog(
+                from_email=from_email, 
+                to_email=to_email, 
+                subject=subject,
+                body=email_body, 
+                status="failed", 
+                error_message=error_message
+            )
+            db.session.add(log)
+            db.session.commit()
+            logger.error(f"Email failed to {to_email} after {max_attempts} attempts: {error_message}")
+        except Exception as log_err:
+            logger.error(f"Error logging failure: {log_err}")
 
     # Notify admin
-    notify_admin_of_failure(to_email, subject, error_message)
+    try:
+        notify_admin_of_failure(to_email, subject, error_message)
+    except Exception as notify_err:
+        logger.error(f"Failed to notify admin: {notify_err}")
+        
     return False, to_email
+
 
 def send_bulk_emails(from_role, to_list, subject, body, content_type="text/html", attachments=[], template_name=None):
     from app import app
@@ -195,67 +268,100 @@ def send_bulk_emails(from_role, to_list, subject, body, content_type="text/html"
     dispatched_count = 0
     
     if attachments:
-        attachment_names = [os.path.basename(path) for path in attachments]
-        logger.info(f"Including {len(attachments)} attachment(s): {', '.join(attachment_names)}")
+        # Validate attachments exist before starting
+        valid_attachments = []
+        for path in attachments:
+            if os.path.exists(path):
+                valid_attachments.append(path)
+                logger.debug(f"Attachment validated: {os.path.basename(path)}")
+            else:
+                logger.warning(f"Attachment not found, skipping: {path}")
+        attachments = valid_attachments
+        
+        if attachments:
+            attachment_names = [os.path.basename(path) for path in attachments]
+            logger.info(f"Including {len(attachments)} attachment(s): {', '.join(attachment_names)}")
     
     def thread_wrapper(identifier):
         actual_email = identifier
         final_body = body or ""
-        if template_name:
-            try:
-                # Try fetching variables for this identifier
-                variables, err = fetch_template_variables(identifier)
-                if err:
-                    logger.warning(f"Template variable fetch error for {identifier}: {err}")
+        
+        try:
+            # Check if this is a direct email address
+            is_direct_email = '@' in identifier and is_valid_email(identifier)
+            
+            if template_name:
+                if is_direct_email:
+                    # For direct emails with templates, we can't fetch variables
+                    # Use the email as-is and render template with minimal variables
+                    logger.warning(f"Using template with direct email {identifier} - limited variable support")
+                    variables = {"email": identifier, "name": identifier.split('@')[0]}
+                    final_body = load_and_render_template(template_name, variables)
+                    actual_email = identifier
+                else:
+                    # Try fetching variables for USN
+                    variables, err = fetch_template_variables(identifier)
+                    if err:
+                        logger.warning(f"Template variable fetch error for {identifier}: {err}")
+                        with failed_emails_lock:
+                            failed_emails.append(identifier)
+                        return
+                        
+                    final_body = load_and_render_template(template_name, variables)
+                    actual_email = variables.get("email")
+                    if not actual_email or '@' not in actual_email:
+                        logger.warning(f"No valid email found for: {identifier}")
+                        with failed_emails_lock:
+                            failed_emails.append(identifier)
+                        return
+            else:
+                # Handle raw body (no template)
+                if is_direct_email:
+                    # Direct email with raw body - use as-is
+                    actual_email = identifier
+                    logger.debug(f"Using direct email: {actual_email}")
+                else:
+                    # USN - need to look up email
+                    variables, err = fetch_template_variables(identifier)
+                    if err:
+                        logger.warning(f"Template variable fetch error for {identifier}: {err}")
+                        with failed_emails_lock:
+                            failed_emails.append(identifier)
+                        return
+                    actual_email = variables.get("email")
+                    if not actual_email or '@' not in actual_email:
+                        logger.warning(f"No valid email found for: {identifier}")
+                        with failed_emails_lock:
+                            failed_emails.append(identifier)
+                        return
+                        
+                if not final_body:
+                    logger.error(f"No body provided for {identifier} and no template applied.")
                     with failed_emails_lock:
                         failed_emails.append(identifier)
                     return
-                final_body = load_and_render_template(template_name, variables)
-                actual_email = variables.get("email")
-                if not actual_email or '@' not in actual_email:
-                    logger.warning(f"No valid email found for: {identifier}")
-                    with failed_emails_lock:
-                        failed_emails.append(identifier)
-                    return
-            except Exception as e:
-                logger.error(f"Template rendering failed for {identifier}: {e}")
+                    
+            # Final check for email format
+            if not is_valid_email(actual_email):
+                logger.warning(f"Invalid email format skipped: {actual_email}")
                 with failed_emails_lock:
-                    failed_emails.append(identifier)
+                    failed_emails.append(actual_email)
                 return
-        else:
-            # Handle raw body with USN (no template)
-            if '@' not in identifier:
-                variables, err = fetch_template_variables(identifier)
-                if err:
-                    logger.warning(f"Template variable fetch error for {identifier}: {err}")
-                    with failed_emails_lock:
-                        failed_emails.append(identifier)
-                    return
-                actual_email = variables.get("email")
-                if not actual_email or '@' not in actual_email:
-                    logger.warning(f"No valid email found for: {identifier}")
-                    with failed_emails_lock:
-                        failed_emails.append(identifier)
-                    return
-            if not final_body:
-                logger.error(f"No body provided for {identifier} and no template applied.")
+                
+            logger.debug(f"Sending to: {actual_email}")
+            success, recipient = send_email_smtp(
+                from_email, from_token, actual_email, subject,
+                final_body, content_type, attachments
+            )
+            if not success:
                 with failed_emails_lock:
-                    failed_emails.append(identifier)
-                return
-        # Final check for email format
-        if not is_valid_email(actual_email):
-            logger.warning(f"Invalid email format skipped: {actual_email}")
+                    failed_emails.append(recipient)
+                    
+        except Exception as e:
+            logger.error(f"Thread error for {identifier}: {e}")
+            logger.debug(f"Thread error traceback: {traceback.format_exc()}")
             with failed_emails_lock:
-                failed_emails.append(actual_email)
-            return
-        logger.info(f"Sending to: {actual_email}")
-        success, recipient = send_email_smtp(
-            from_email, from_token, actual_email, subject,
-            final_body, content_type, attachments
-        )
-        if not success:
-            with failed_emails_lock:
-                failed_emails.append(recipient)
+                failed_emails.append(identifier)
 
     def thread_launcher(identifier):
         with app.app_context():
@@ -289,33 +395,37 @@ def send_bulk_emails(from_role, to_list, subject, body, content_type="text/html"
         logger.info(f"Bulk email job completed successfully in {elapsed_time:.2f}s. All {len(recipients)} emails sent")
         return True, []
 
+
 def notify_admin_of_failure(failed_email, original_subject, error_message):
-    from app import db
+    from app import app, db
+    
     try:
-        admin_email = db.session.execute(
-            "SELECT email FROM gmail_accounts WHERE is_admin = true LIMIT 1"
-        ).scalar()
-    except Exception as db_err:
-        logger.error(f"Database error while fetching admin email: {db_err}")
-        return
+        with app.app_context():
+            admin_email = db.session.execute(
+                "SELECT email FROM gmail_accounts WHERE is_admin = true LIMIT 1"
+            ).scalar()
+            
+            if not admin_email:
+                logger.error("No admin email found in gmail_accounts")
+                return
 
-    if not admin_email:
-        logger.error("No admin email found in gmail_accounts")
-        return
+            subject = f"[Mailer Alert] Failed to Send Email to {failed_email}"
+            body = f"""The system failed to send an email after multiple attempts.
 
-    subject = f"[Mailer Alert] Failed to Send Email to {failed_email}"
-    body = f"""The system failed to send an email after 3 attempts.
+Recipient: {failed_email}
+Original Subject: {original_subject}
+Error: {error_message}
 
-    Recipient: {failed_email}
-    Original Subject: {original_subject}
-    Error: {error_message}
+Please check the logs for more details.
+"""
 
-    Please check the logs for more details.
-    """
-
-    try:
-        from_email, from_token = fetch_sender_credentials("admin")  # assumes a 'gmail_accounts' row with role='admin'
-        send_email_smtp(from_email, from_token, admin_email, subject, body, content_type="text/plain")
-        logger.info(f"Admin notified about failure to send email to {failed_email}")
+            from_email, from_token = fetch_sender_credentials("admin")
+            if from_email and from_token:
+                send_email_smtp(from_email, from_token, admin_email, subject, body, content_type="text/plain")
+                logger.info(f"Admin notified about failure to send email to {failed_email}")
+            else:
+                logger.error("Could not find admin credentials to send notification")
+                
     except Exception as e:
         logger.error(f"Failed to notify admin: {e}")
+        logger.debug(f"Admin notification error traceback: {traceback.format_exc()}")

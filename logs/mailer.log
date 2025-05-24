@@ -2960,3 +2960,166 @@ with app.app_context(). See the documentation for more information.
 2025-05-21 16:39:40,389 - INFO - Email sent to vaibuk1234@gmail.com on attempt 1
 2025-05-21 16:39:40,399 - INFO - Bulk email job completed successfully in 14.93s. All 3 emails sent
 2025-05-21 16:39:40,399 - INFO - All 3 emails sent successfully
+2025-05-24 13:12:12,423 - INFO - Starting mailer application
+2025-05-24 13:12:12,423 - INFO - Creating database tables if they don't exist
+2025-05-24 13:14:17,134 - INFO - Starting scheduler
+2025-05-24 13:14:17,134 - INFO - Starting email scheduler
+2025-05-24 13:14:17,184 - INFO - Running Flask application
+2025-05-24 13:14:33,676 - INFO - Starting mailer application
+2025-05-24 13:14:33,677 - INFO - Creating database tables if they don't exist
+2025-05-24 13:17:05,715 - INFO - Starting mailer application
+2025-05-24 13:17:05,716 - INFO - Creating database tables if they don't exist
+2025-05-24 13:17:25,858 - INFO - Starting scheduler
+2025-05-24 13:17:25,858 - INFO - Starting email scheduler
+2025-05-24 13:17:25,879 - INFO - Running Flask application
+2025-05-24 13:17:27,862 - INFO - Starting mailer application
+2025-05-24 13:17:27,862 - INFO - Creating database tables if they don't exist
+2025-05-24 13:17:35,355 - INFO - Starting scheduler
+2025-05-24 13:17:35,356 - INFO - Starting email scheduler
+2025-05-24 13:17:35,376 - INFO - Running Flask application
+2025-05-24 13:17:43,462 - INFO - Email API endpoint accessed
+2025-05-24 13:17:43,464 - INFO - No attachment received with request
+2025-05-24 13:17:43,464 - INFO - API accessed with token: hod...
+2025-05-24 13:17:44,496 - INFO - Authenticated user: hod (ID: user2)
+2025-05-24 13:17:50,060 - INFO - No scheduled_at provided; email will be sent immediately.
+2025-05-24 13:17:50,060 - INFO - Sending email: from_role=hod, to=1 recipient(s), subject='test with form_submit'
+2025-05-24 13:17:50,074 - INFO - Starting bulk email job: role=hod, recipients=1
+2025-05-24 13:17:50,433 - INFO - Found credentials for hod: vaibhav.mca2023@bmsit.in
+2025-05-24 13:17:50,434 - INFO - Resolving 1 recipient identifiers
+2025-05-24 13:17:50,434 - INFO - Processing: vaibuk1234@gmail.com
+2025-05-24 13:17:50,434 - INFO - Resolution complete: 0 groups, 0 users, 0 not found, 1 total identifiers
+2025-05-24 13:17:50,434 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s)
+2025-05-24 13:17:50,436 - INFO - Dispatched 1 emails, waiting for completion
+2025-05-24 13:17:55,553 - WARNING - USN 'vaibuk1234@gmail.com' not found in database
+2025-05-24 13:17:55,553 - WARNING - Template variable fetch error for vaibuk1234@gmail.com: USN 'vaibuk1234@gmail.com' not found
+2025-05-24 13:17:55,867 - WARNING - Bulk email job completed in 5.79s: 1 of 1 emails failed
+2025-05-24 13:17:55,867 - WARNING - 1 out of 1 emails failed to send
+2025-05-24 13:18:39,262 - INFO - Starting mailer application
+2025-05-24 13:18:39,262 - INFO - Creating database tables if they don't exist
+2025-05-24 13:18:47,371 - INFO - Starting scheduler
+2025-05-24 13:18:47,372 - INFO - Starting email scheduler
+2025-05-24 13:18:47,393 - INFO - Running Flask application
+2025-05-24 13:18:52,814 - INFO - Email API endpoint accessed
+2025-05-24 13:18:52,822 - INFO - No attachment received with request
+2025-05-24 13:18:52,822 - INFO - API accessed with token: hod...
+2025-05-24 13:18:54,023 - INFO - Authenticated user: hod (ID: user2)
+2025-05-24 13:18:54,103 - INFO - No scheduled_at provided; email will be sent immediately.
+2025-05-24 13:18:54,103 - INFO - Sending email: from_role=hod, to=1 recipient(s), subject='test with form_submit'
+2025-05-24 13:18:54,108 - INFO - Starting bulk email job: role=hod, recipients=1
+2025-05-24 13:18:54,428 - INFO - Found credentials for hod: vaibhav.mca2023@bmsit.in
+2025-05-24 13:18:54,428 - INFO - Resolving 1 recipient identifiers
+2025-05-24 13:18:54,428 - INFO - Processing: vaibuk1234@gmail.com
+2025-05-24 13:18:54,428 - INFO - Resolution complete: 0 groups, 0 users, 0 not found, 1 total identifiers
+2025-05-24 13:18:54,428 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s)
+2025-05-24 13:18:54,428 - INFO - Dispatched 1 emails, waiting for completion
+2025-05-24 13:19:00,156 - WARNING - USN 'vaibuk1234@gmail.com' not found in database
+2025-05-24 13:19:00,156 - WARNING - Template variable fetch error for vaibuk1234@gmail.com: USN 'vaibuk1234@gmail.com' not found
+2025-05-24 13:19:00,577 - WARNING - Bulk email job completed in 6.47s: 1 of 1 emails failed
+2025-05-24 13:19:00,577 - WARNING - 1 out of 1 emails failed to send
+2025-05-24 13:22:26,388 - INFO - Starting mailer application
+2025-05-24 13:22:26,389 - INFO - Creating database tables if they don't exist
+2025-05-24 13:22:34,283 - INFO - Starting scheduler
+2025-05-24 13:22:34,283 - INFO - Starting email scheduler
+2025-05-24 13:22:34,301 - INFO - Running Flask application
+2025-05-24 13:22:47,470 - INFO - Email API endpoint accessed
+2025-05-24 13:22:47,471 - INFO - No attachment received with request
+2025-05-24 13:22:47,471 - INFO - API accessed with token: hod...
+2025-05-24 13:22:48,378 - INFO - Authenticated user: hod (ID: user2)
+2025-05-24 13:22:48,501 - INFO - No scheduled_at provided; email will be sent immediately.
+2025-05-24 13:22:48,501 - INFO - Sending email: from_role=hod, to=1 recipient(s), subject='test with form_submit'
+2025-05-24 13:22:48,507 - INFO - Starting bulk email job: role=hod, recipients=1
+2025-05-24 13:22:48,825 - INFO - Found credentials for hod: vaibhav.mca2023@bmsit.in
+2025-05-24 13:22:48,825 - INFO - Resolving 1 recipient identifiers
+2025-05-24 13:22:48,825 - INFO - Processing: vaibuk1234@gmail.com
+2025-05-24 13:22:48,826 - INFO - Resolution complete: 0 groups, 0 users, 0 not found, 1 total identifiers
+2025-05-24 13:22:48,826 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s)
+2025-05-24 13:22:48,827 - WARNING - Using template with direct email vaibuk1234@gmail.com - limited variable support
+2025-05-24 13:22:48,828 - INFO - Dispatched 1 emails, waiting for completion
+2025-05-24 13:22:48,828 - INFO - Loading template: welcome_email
+2025-05-24 13:23:01,419 - INFO - Email sent to vaibuk1234@gmail.com on attempt 1 (tracking: ba4fef38da1047f585565bcef1da9210)
+2025-05-24 13:23:01,727 - INFO - Bulk email job completed successfully in 13.22s. All 1 emails sent
+2025-05-24 13:23:01,728 - INFO - All 1 emails sent successfully
+2025-05-24 13:26:06,070 - INFO - Email API endpoint accessed
+2025-05-24 13:26:06,070 - INFO - No attachment received with request
+2025-05-24 13:26:06,070 - INFO - API accessed with token: hod...
+2025-05-24 13:26:07,063 - INFO - Authenticated user: hod (ID: user2)
+2025-05-24 13:26:07,063 - INFO - No scheduled_at provided; email will be sent immediately.
+2025-05-24 13:26:07,063 - INFO - Sending email: from_role=hod, to=1 recipient(s), subject='test with form_submit'
+2025-05-24 13:26:07,063 - INFO - Starting bulk email job: role=hod, recipients=1
+2025-05-24 13:26:07,346 - INFO - Found credentials for hod: vaibhav.mca2023@bmsit.in
+2025-05-24 13:26:07,346 - INFO - Resolving 1 recipient identifiers
+2025-05-24 13:26:07,346 - INFO - Processing: puc1001
+2025-05-24 13:26:07,988 - INFO - Resolved USN 'puc1001' to astronft3@gmail.com
+2025-05-24 13:26:07,988 - INFO - Resolution complete: 0 groups, 1 users, 0 not found, 1 total identifiers
+2025-05-24 13:26:08,258 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 1 recipient(s)
+2025-05-24 13:26:08,261 - INFO - Dispatched 1 emails, waiting for completion
+2025-05-24 13:26:09,222 - INFO - Successfully resolved template variables for USN: puc1001
+2025-05-24 13:26:09,222 - INFO - Loading template: welcome_email
+2025-05-24 13:26:14,599 - INFO - Email sent to astronft3@gmail.com on attempt 1 (tracking: f3431019364f4bb0be14a09af6eeb0e4)
+2025-05-24 13:26:14,940 - INFO - Bulk email job completed successfully in 7.88s. All 1 emails sent
+2025-05-24 13:26:14,941 - INFO - All 1 emails sent successfully
+2025-05-24 13:27:30,419 - INFO - Email API endpoint accessed
+2025-05-24 13:27:30,428 - INFO - No attachment received with request
+2025-05-24 13:27:30,428 - INFO - API accessed with token: hod...
+2025-05-24 13:27:31,351 - INFO - Authenticated user: hod (ID: user2)
+2025-05-24 13:27:31,351 - INFO - No scheduled_at provided; email will be sent immediately.
+2025-05-24 13:27:31,351 - INFO - Sending email: from_role=hod, to=1 recipient(s), subject='test with form_submit'
+2025-05-24 13:27:31,351 - INFO - Starting bulk email job: role=hod, recipients=1
+2025-05-24 13:27:31,650 - INFO - Found credentials for hod: vaibhav.mca2023@bmsit.in
+2025-05-24 13:27:31,651 - INFO - Resolving 1 recipient identifiers
+2025-05-24 13:27:31,651 - INFO - Processing: *
+2025-05-24 13:27:32,265 - INFO - Broadcast: resolved 9 USNs from all groups
+2025-05-24 13:27:32,265 - INFO - Resolution complete: 0 groups, 0 users, 0 not found, 9 total identifiers
+2025-05-24 13:27:32,571 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 9 recipient(s)
+2025-05-24 13:27:32,589 - INFO - Dispatched 9 emails, waiting for completion
+2025-05-24 13:27:33,391 - INFO - Successfully resolved template variables for USN: puc1001
+2025-05-24 13:27:33,392 - INFO - Loading template: welcome_email
+2025-05-24 13:27:33,492 - INFO - Successfully resolved template variables for USN: sslc1003
+2025-05-24 13:27:33,492 - INFO - Loading template: welcome_email
+2025-05-24 13:27:35,188 - INFO - Successfully resolved template variables for USN: sslc1002
+2025-05-24 13:27:35,188 - INFO - Loading template: welcome_email
+2025-05-24 13:27:35,188 - INFO - Successfully resolved template variables for USN: puc1002
+2025-05-24 13:27:35,188 - INFO - Successfully resolved template variables for USN: puc2001
+2025-05-24 13:27:35,188 - INFO - Loading template: welcome_email
+2025-05-24 13:27:35,188 - INFO - Loading template: welcome_email
+2025-05-24 13:27:35,337 - INFO - Successfully resolved template variables for USN: puc2002
+2025-05-24 13:27:35,338 - INFO - Loading template: welcome_email
+2025-05-24 13:27:35,436 - INFO - Successfully resolved template variables for USN: sslc1005
+2025-05-24 13:27:35,436 - INFO - Successfully resolved template variables for USN: sslc1004
+2025-05-24 13:27:35,436 - INFO - Loading template: welcome_email
+2025-05-24 13:27:35,436 - INFO - Loading template: welcome_email
+2025-05-24 13:27:35,460 - INFO - Successfully resolved template variables for USN: puc2003
+2025-05-24 13:27:35,460 - INFO - Loading template: welcome_email
+2025-05-24 13:27:39,633 - INFO - Email sent to astronft3@gmail.com on attempt 1 (tracking: 1830e25ed33b4d20b81325579a1d7458)
+2025-05-24 13:27:39,897 - INFO - Email sent to vaibhav@gmail.con on attempt 1 (tracking: acc2b0202a044a289de3cbefe5b5f628)
+2025-05-24 13:27:41,546 - INFO - Email sent to sahilrathod703@gmail.com on attempt 1 (tracking: 9bed56364ffe4814bdb93ab44eee0a57)
+2025-05-24 13:27:41,793 - INFO - Email sent to nagesh.b.m.7411@gmail.com on attempt 1 (tracking: 1666f21353164858a7212ce2d74e9fa0)
+2025-05-24 13:27:42,095 - INFO - Email sent to fakeemailone1vaib@gmail.com on attempt 1 (tracking: 1cda1552e315459792c787a219f14016)
+2025-05-24 13:27:42,096 - INFO - Email sent to vaibhav@gmal.connnn on attempt 1 (tracking: 194f086d2c4d446fa45a882d1a5c2212)
+2025-05-24 13:27:42,355 - INFO - Email sent to shivleelak6363@gmail.com on attempt 1 (tracking: 22a24b9f2bcb40bfbc991b9a37619276)
+2025-05-24 13:27:42,912 - INFO - Email sent to test@invalid-domain.com on attempt 1 (tracking: 581c92f701dd4bdd8cd4880aa4765161)
+2025-05-24 13:27:42,912 - INFO - Email sent to sameer252664@gmail.com on attempt 1 (tracking: ed5f1c032faa4bd09d91fba1cc02faf8)
+2025-05-24 13:27:43,222 - INFO - Bulk email job completed successfully in 11.87s. All 9 emails sent
+2025-05-24 13:27:43,222 - INFO - All 1 emails sent successfully
+2025-05-24 13:28:30,824 - INFO - Email API endpoint accessed
+2025-05-24 13:28:30,827 - INFO - No attachment received with request
+2025-05-24 13:28:30,827 - INFO - API accessed with token: hod...
+2025-05-24 13:28:31,861 - INFO - Authenticated user: hod (ID: user2)
+2025-05-24 13:28:31,861 - INFO - No scheduled_at provided; email will be sent immediately.
+2025-05-24 13:28:31,861 - INFO - Sending email: from_role=hod, to=1 recipient(s), subject='test with form_submit'
+2025-05-24 13:28:31,862 - INFO - Starting bulk email job: role=hod, recipients=1
+2025-05-24 13:28:32,161 - INFO - Found credentials for hod: vaibhav.mca2023@bmsit.in
+2025-05-24 13:28:32,161 - INFO - Resolving 1 recipient identifiers
+2025-05-24 13:28:32,169 - INFO - Processing: puc1*
+2025-05-24 13:28:33,143 - INFO - Resolved group 'puc1' to 2 members
+2025-05-24 13:28:33,143 - INFO - Resolution complete: 1 groups, 0 users, 0 not found, 2 total identifiers
+2025-05-24 13:28:33,395 - INFO - Sending email from vaibhav.mca2023@bmsit.in to 2 recipient(s)
+2025-05-24 13:28:33,403 - INFO - Dispatched 2 emails, waiting for completion
+2025-05-24 13:28:34,321 - INFO - Successfully resolved template variables for USN: puc1001
+2025-05-24 13:28:34,322 - INFO - Loading template: welcome_email
+2025-05-24 13:28:34,322 - INFO - Successfully resolved template variables for USN: puc1002
+2025-05-24 13:28:34,324 - INFO - Loading template: welcome_email
+2025-05-24 13:28:39,847 - INFO - Email sent to shivleelak6363@gmail.com on attempt 1 (tracking: b8bc047d3975492994bd4428872c8afa)
+2025-05-24 13:28:39,848 - INFO - Email sent to astronft3@gmail.com on attempt 1 (tracking: 2f855e44c2de4d41acc9c5f2f9af46c9)
+2025-05-24 13:28:40,094 - INFO - Bulk email job completed successfully in 8.23s. All 2 emails sent
+2025-05-24 13:28:40,095 - INFO - All 1 emails sent successfully
