@@ -38,6 +38,9 @@ def send_email():
             logger.warning(f"Disallowed file type rejected: {filename}")
             return jsonify({"error": "Disallowed file type"}), 400
 
+        #Make sure file is present
+        os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
         filepath = os.path.join(UPLOAD_FOLDER, filename)
         file.save(filepath)
         logger.info(f"File saved at: {filepath}")
